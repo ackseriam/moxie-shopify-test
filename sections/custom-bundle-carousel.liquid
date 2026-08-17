@@ -26,6 +26,7 @@
 
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
 <bundle-carousel-component
+  id="bundle-carousel-{{ section.id }}"
   class="bundle-carousel"
   data-section-id="{{ section.id }}"
   data-max-items="{{ max_bundle_items }}"
@@ -180,7 +181,7 @@
           <div class="bundle-carousel__pricing">
             <span class="bundle-carousel__compare-price" ref="comparePrice" hidden>
               <span class="visually-hidden">{{ 'content.price_regular' | t }}&nbsp;</span>
-              {{- 0 | money -}}
+              <s ref="comparePriceAmount">{{ 0 | money }}</s>
             </span>
             <span class="bundle-carousel__total-price" ref="totalPrice">{{ 0 | money }}</span>
           </div>
