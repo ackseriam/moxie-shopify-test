@@ -134,6 +134,12 @@
     "back_to_main_menu": "Zpět do hlavní nabídky"
   },
   "content": {
+    "bundle_selected_count": "Vybráno {{ count }} z {{ max }}",
+    "bundle_max_reached": "Dosáhli jste limitu {{ max }} produktů pro tuto sadu",
+    "bundle_savings": "Ušetříte {{ amount }} (sleva {{ percent }} %)",
+    "bundle_select_product": "Přidat {{ title }} do sady",
+    "bundle_add_error_partial": "Nepodařilo se přidat: {{ titles }}",
+    "bundle_onboarding": "Přidejte bloky produktů v editoru motivu a sestavte sadu",
     "reviews": "recen.",
     "language": "Jazyk",
     "localization_region_and_language": "Oblast a jazyk",

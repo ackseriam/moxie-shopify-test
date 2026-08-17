@@ -30,6 +30,7 @@
     "text": "نص"
   },
   "content": {
+    "bundle": "حزمة",
     "visible_if_collection_has_more_products": "مرئي إذا كانت المجموعة تحتوي على منتجات أكثر من المعروضة",
     "advanced": "متقدم",
     "appearance": "المظهر",
@@ -215,6 +216,9 @@
     "work_quickly_to_ship": "<p>سنعمل بسرعة لشحن طلبك في أقرب وقت ممكن. بمجرد شحن طلبك، ستتلقى رسالة بريد إلكتروني تحتوي على مزيد من المعلومات. تختلف أوقات التوصيل حسب موقعك.</p>"
   },
   "info": {
+    "bundle_card_palette": "يحافظ نص البطاقة ومزج الصورة على لوحة الألوان الفاتحة الثابتة للتصميم؛ ولا تؤثر أنظمة الألوان الداكنة إلا على خلفية القسم والملخص",
+    "bundle_max_metafield": "يتم تجاوزه بواسطة الحقل الوصفي للمتجر custom.bundle_max_items عند تعيينه",
+    "bundle_discount_preview": "معاينة واجهة المتجر فقط. أنشئ خصمًا تلقائيًا مطابقًا في إدارة Shopify ليتم تطبيق الخصم نفسه عند الدفع",
     "actions_display_style": "تُستخدم الأيقونات دائماً على الهاتف المحمول",
     "applies_on_image_only": "ينطبق على الصور فقط",
     "aspect_ratio_adjusted": "معدل في بعض التخطيطات",
@@ -244,6 +248,7 @@
     "media_type_info": "تمت تعبئة الميزات من روابط القائمة الخاصة بك"
   },
   "names": {
+    "bundle_carousel": "عرض دائري للحزمة",
     "column": "عمود",
     "product_title": "عنوان المنتج",
     "custom_liquid": "Liquid مخصص",
@@ -682,6 +687,12 @@
     "below_media": "أسفل الوسائط"
   },
   "settings": {
+    "button_label": "تسمية الزر",
+    "card_background": "خلفية البطاقة",
+    "discount_min_items": "الحد الأدنى من المنتجات للخصم",
+    "discount_percentage": "خصم الحزمة",
+    "max_bundle_items": "الحد الأقصى للمنتجات لكل حزمة",
+    "subtitle": "عنوان فرعي",
     "accordion": "أكورديون",
     "account": "حساب",
     "actions_display_style": "نمط القائمة",
@@ -1097,6 +1108,9 @@
     "bottom_row_text": "نص الصف السفلي"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "إضافة الحزمة إلى سلة التسوق",
+    "bundle_subtitle": "اختر منتجاتك المفضلة ووفّر",
+    "bundle_title": "أنشئ حزمتك",
     "accordion_heading": "عنوان القائمة المنسدلة",
     "are_purchases_final_sale": "هل هناك أي مشتريات تعتبر بيعاً نهائياً؟",
     "be_bold": "كن جريئًا.",

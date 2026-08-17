@@ -130,6 +130,12 @@
     "back_to_main_menu": "Zurück zum Hauptmenü"
   },
   "content": {
+    "bundle_selected_count": "{{ count }} von {{ max }} ausgewählt",
+    "bundle_max_reached": "Du hast das Limit von {{ max }} Produkten für dieses Bundle erreicht",
+    "bundle_savings": "Du sparst {{ amount }} ({{ percent }} % Rabatt)",
+    "bundle_select_product": "{{ title }} zum Bundle hinzufügen",
+    "bundle_add_error_partial": "Konnte nicht hinzugefügt werden: {{ titles }}",
+    "bundle_onboarding": "Füge im Theme-Editor Produkt-Blöcke hinzu, um das Bundle zusammenzustellen",
     "reviews": "Reviews",
     "language": "Sprache",
     "localization_region_and_language": "Region und Sprache",

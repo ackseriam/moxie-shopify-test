@@ -30,6 +30,7 @@
     "text": "טקסט"
   },
   "content": {
+    "bundle": "מארז",
     "visible_if_collection_has_more_products": "גלוי אם באוסף יש יותר מוצרים ממה שמוצג",
     "advanced": "מתקדם",
     "appearance": "מראה",
@@ -215,6 +216,9 @@
     "work_quickly_to_ship": "<p>נעבוד מהר כדי לשלוח את ההזמנה שלך בהקדם האפשרי. לאחר שההזמנה שלך תישלח, תקבל דוא&quot;ל עם מידע נוסף. זמני האספקה משתנים בהתאם למיקומך.</p>"
   },
   "info": {
+    "bundle_card_palette": "טקסט הכרטיס ומיזוג התמונה שומרים על פלטת הצבעים הבהירה הקבועה של העיצוב; סכמות צבעים כהות משפיעות רק על רקע המקטע ועל הסיכום",
+    "bundle_max_metafield": "נדרס על ידי המטא-שדה של החנות custom.bundle_max_items כאשר הוא מוגדר",
+    "bundle_discount_preview": "תצוגה מקדימה בחזית החנות בלבד. יש ליצור הנחה אוטומטית תואמת בממשק הניהול של Shopify כדי שאותה הנחה תחול בקופה",
     "actions_display_style": "תמיד נעשה שימוש בסמלים בנייד",
     "applies_on_image_only": "חל על תמונות בלבד",
     "aspect_ratio_adjusted": "מותאם בחלק מהפריסות",
@@ -244,6 +248,7 @@
     "media_type_info": "התכונות מאוכלסות מקישורי התפריט שלך"
   },
   "names": {
+    "bundle_carousel": "קרוסלת מארז",
     "column": "עמודה",
     "product_title": "כותרת מוצר",
     "custom_liquid": "Custom Liquid",
@@ -682,6 +687,12 @@
     "below_media": "מתחת למדיה"
   },
   "settings": {
+    "button_label": "תווית כפתור",
+    "card_background": "רקע הכרטיס",
+    "discount_min_items": "מינימום מוצרים להנחה",
+    "discount_percentage": "הנחת מארז",
+    "max_bundle_items": "מקסימום מוצרים למארז",
+    "subtitle": "כותרת משנה",
     "accordion": "אקורדיון",
     "account": "חשבון",
     "actions_display_style": "סגנון תפריט",
@@ -1097,6 +1108,9 @@
     "bottom_row_text": "טקסט לשורה התחתונה"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "הוספת המארז לסל",
+    "bundle_subtitle": "בחרו את המועדפים שלכם וחסכו",
+    "bundle_title": "הרכיבו מארז משלכם",
     "accordion_heading": "כותרת אקורדיון",
     "are_purchases_final_sale": "האם יש רכישות שהן מכירה סופית?",
     "be_bold": "להיות נועזים.",

@@ -1097,6 +1097,7 @@
   },
   "info": {
     "bundle_max_metafield": "Se sobrescribe con el metafield de tienda custom.bundle_max_items cuando está definido",
+    "bundle_card_palette": "El texto y el fondo de las tarjetas mantienen la paleta clara fija del diseño; los esquemas oscuros solo afectan al fondo de la sección y al resumen",
     "bundle_discount_preview": "Solo es una previsualización. Crea un descuento automático equivalente en el admin de Shopify para que se aplique en el checkout",
     "carousel_layout_on_mobile": "En dispositivos móviles siempre se usa el carrusel",
     "video_alt_text": "Describe el video para personas usuarias de tecnologías de asistencia",

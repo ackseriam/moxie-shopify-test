@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "セットカルーセル",
     "404": "404",
     "colors": "カラーパレット",
     "custom_section": "カスタムセクション",
@@ -171,6 +172,12 @@
     "disclosures": "開示情報"
   },
   "settings": {
+    "button_label": "ボタンのラベル",
+    "card_background": "カードの背景",
+    "discount_min_items": "割引に必要な最小商品数",
+    "discount_percentage": "セット割引",
+    "max_bundle_items": "セットあたりの最大商品数",
+    "subtitle": "サブタイトル",
     "alignment": "配置",
     "autoplay": "自動再生",
     "background": "背景",
@@ -862,6 +869,7 @@
     "input_field": "入力フィールド"
   },
   "content": {
+    "bundle": "セット",
     "advanced": "高度な設定",
     "background_image": "背景画像",
     "background_video": "背景動画",
@@ -1047,6 +1055,9 @@
     "introducing_p": "<p><em>新登場</em></p>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "セットをカートに追加",
+    "bundle_subtitle": "お気に入りを選んでお得に",
+    "bundle_title": "セットを作成",
     "button_label": "今すぐ購入",
     "collapsible_row": "折りたたみ可能な行",
     "heading": "見出し",
@@ -1085,6 +1096,9 @@
     "disclosures": "開示情報"
   },
   "info": {
+    "bundle_card_palette": "カードのテキストと画像のブレンドはデザインの固定されたライトパレットを維持します。ダークな配色はセクションの背景とサマリーにのみ影響します",
+    "bundle_max_metafield": "ストアのメタフィールドcustom.bundle_max_itemsが設定されている場合は、その値が優先されます",
+    "bundle_discount_preview": "ストアフロントのプレビューのみです。チェックアウトで同じ割引が適用されるように、Shopify管理画面で対応する自動割引を作成してください",
     "video_alt_text": "支援技術のユーザーのために動画の説明を記述します",
     "video_autoplay": "動画はデフォルトでミュートになります",
     "video_external": "YouTubeまたはVimeoのURLを使用します",

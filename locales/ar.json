@@ -162,6 +162,12 @@
     }
   },
   "content": {
+    "bundle_selected_count": "تم تحديد {{ count }} من {{ max }}",
+    "bundle_max_reached": "لقد وصلت إلى الحد الأقصى البالغ {{ max }} منتجات لهذه الحزمة",
+    "bundle_savings": "توفر {{ amount }} (خصم {{ percent }}%)",
+    "bundle_select_product": "إضافة {{ title }} إلى الحزمة",
+    "bundle_add_error_partial": "تعذرت إضافة: {{ titles }}",
+    "bundle_onboarding": "أضف بلوكات منتجات في محرر السمة لإنشاء الحزمة",
     "cancel": "إلغاء",
     "discount": "الخصم",
     "account_title": "الحساب",

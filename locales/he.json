@@ -156,6 +156,12 @@
     }
   },
   "content": {
+    "bundle_selected_count": "נבחרו {{ count }} מתוך {{ max }}",
+    "bundle_max_reached": "הושגה המגבלה של {{ max }} מוצרים למארז זה",
+    "bundle_savings": "חיסכון של {{ amount }} ({{ percent }}% הנחה)",
+    "bundle_select_product": "הוספת {{ title }} למארז",
+    "bundle_add_error_partial": "לא ניתן היה להוסיף: {{ titles }}",
+    "bundle_onboarding": "יש להוסיף בלוקים של מוצרים בעורך ערכת העיצוב כדי להרכיב את המארז",
     "cancel": "ביטול",
     "discount": "הנחה",
     "account_title": "חשבון",

@@ -130,6 +130,12 @@
     "zoom_media": "{{ index }} 미디어 확대/축소"
   },
   "content": {
+    "bundle_selected_count": "{{ max }}개 중 {{ count }}개 선택됨",
+    "bundle_max_reached": "이 번들의 최대 제품 수({{ max }}개)에 도달했습니다",
+    "bundle_savings": "{{ amount }} 절약 ({{ percent }}% 할인)",
+    "bundle_select_product": "{{ title }}을(를) 번들에 추가",
+    "bundle_add_error_partial": "추가하지 못했습니다: {{ titles }}",
+    "bundle_onboarding": "테마 편집기에서 제품 블록을 추가하여 번들을 구성하세요",
     "reviews": "리뷰",
     "language": "언어",
     "localization_region_and_language": "지역 및 언어",

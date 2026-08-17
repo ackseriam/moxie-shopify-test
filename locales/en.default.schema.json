@@ -225,6 +225,7 @@
   },
   "info": {
     "bundle_max_metafield": "Overridden by the shop metafield custom.bundle_max_items when it's set",
+    "bundle_card_palette": "Card text and image blend keep the design's fixed light palette; dark schemes only affect the section background and summary",
     "bundle_discount_preview": "Storefront preview only. Create a matching automatic discount in the Shopify admin so the same discount is applied at checkout",
     "actions_display_style": "Icons are always used on mobile",
     "applies_on_image_only": "Applies to images only",

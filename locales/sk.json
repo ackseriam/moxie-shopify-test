@@ -134,6 +134,12 @@
     "back_to_main_menu": "Späť do hlavnej ponuky"
   },
   "content": {
+    "bundle_selected_count": "Vybraté: {{ count }} z {{ max }}",
+    "bundle_max_reached": "Dosiahli ste limit {{ max }} produktov pre túto sadu",
+    "bundle_savings": "Ušetríte {{ amount }} (zľava {{ percent }} %)",
+    "bundle_select_product": "Pridať {{ title }} do sady",
+    "bundle_add_error_partial": "Nepodarilo sa pridať: {{ titles }}",
+    "bundle_onboarding": "Pridajte bloky produktov v editore témy a vytvorte sadu",
     "reviews": "recenz.",
     "no_results_found": "Nenašli sa žiadne výsledky",
     "language": "Jazyk",

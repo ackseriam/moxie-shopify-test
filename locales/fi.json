@@ -130,6 +130,12 @@
     "back_to_main_menu": "Takaisin päävalikkoon"
   },
   "content": {
+    "bundle_selected_count": "{{ count }}/{{ max }} valittu",
+    "bundle_max_reached": "Olet saavuttanut tämän paketin {{ max }} tuotteen rajan",
+    "bundle_savings": "Säästät {{ amount }} ({{ percent }} % alennus)",
+    "bundle_select_product": "Lisää {{ title }} pakettiin",
+    "bundle_add_error_partial": "Lisääminen epäonnistui: {{ titles }}",
+    "bundle_onboarding": "Lisää tuotelohkoja teemaeditorissa kootaksesi paketin",
     "reviews": "arvostelua",
     "language": "Kieli",
     "localization_region_and_language": "Alue ja kieli",

@@ -130,6 +130,12 @@
     "back_to_main_menu": "Επιστροφή στο κύριο μενού"
   },
   "content": {
+    "bundle_selected_count": "Επιλέχθηκαν {{ count }} από {{ max }}",
+    "bundle_max_reached": "Φτάσατε το όριο των {{ max }} προϊόντων για αυτό το πακέτο",
+    "bundle_savings": "Εξοικονομείτε {{ amount }} (έκπτωση {{ percent }}%)",
+    "bundle_select_product": "Προσθήκη του {{ title }} στο πακέτο",
+    "bundle_add_error_partial": "Δεν ήταν δυνατή η προσθήκη: {{ titles }}",
+    "bundle_onboarding": "Προσθέστε μπλοκ προϊόντων στο πρόγραμμα επεξεργασίας θέματος για να δημιουργήσετε το πακέτο",
     "reviews": "κριτικές",
     "no_results_found": "Δεν βρέθηκαν αποτελέσματα",
     "language": "Γλώσσα",

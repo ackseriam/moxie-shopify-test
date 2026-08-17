@@ -130,6 +130,12 @@
     "zoom_media": "Medyayı yakınlaştır: {{ index }}"
   },
   "content": {
+    "bundle_selected_count": "Seçilen: {{ count }} / {{ max }}",
+    "bundle_max_reached": "Bu paket için {{ max }} ürün sınırına ulaştınız",
+    "bundle_savings": "{{ amount }} tasarruf edersiniz (%{{ percent }} indirim)",
+    "bundle_select_product": "{{ title }} ürününü pakete ekle",
+    "bundle_add_error_partial": "Eklenemedi: {{ titles }}",
+    "bundle_onboarding": "Paketi oluşturmak için tema düzenleyicisinde ürün blokları ekleyin",
     "reviews": "değerlendirme",
     "language": "Dil",
     "localization_region_and_language": "Bölge ve dil",

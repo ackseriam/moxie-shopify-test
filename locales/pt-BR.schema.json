@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "Carrossel de kit",
     "404": "404",
     "colors": "Paleta de cores",
     "custom_section": "Seção personalizada",
@@ -171,6 +172,12 @@
     "disclosures": "Divulgações"
   },
   "settings": {
+    "button_label": "Etiqueta do botão",
+    "card_background": "Plano de fundo do card",
+    "discount_min_items": "Mínimo de produtos para o desconto",
+    "discount_percentage": "Desconto do kit",
+    "max_bundle_items": "Máximo de produtos por kit",
+    "subtitle": "Subtítulo",
     "alignment": "Alinhamento",
     "autoplay": "Reprodução automática",
     "background": "Plano de fundo",
@@ -862,6 +869,7 @@
     "input_field": "Campo de entrada"
   },
   "content": {
+    "bundle": "Kit",
     "advanced": "Avançado",
     "background_image": "Imagem de fundo",
     "background_video": "Vídeo de fundo",
@@ -1047,6 +1055,9 @@
     "introducing_p": "<p><em>Apresentando</em></p>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "Adicionar kit ao carrinho",
+    "bundle_subtitle": "Escolha seus favoritos e economize",
+    "bundle_title": "Monte seu kit",
     "button_label": "Compre agora",
     "collapsible_row": "Linha expansível",
     "heading": "Título",
@@ -1085,6 +1096,9 @@
     "disclosures": "Divulgações"
   },
   "info": {
+    "bundle_card_palette": "O texto do card e a mesclagem da imagem mantêm a paleta clara fixa do design; esquemas de cores escuros afetam apenas o plano de fundo da seção e o resumo",
+    "bundle_max_metafield": "Substituído pelo metacampo da loja custom.bundle_max_items quando ele estiver definido",
+    "bundle_discount_preview": "Apenas pré-visualização da vitrine. Crie um desconto automático correspondente no admin da Shopify para que o mesmo desconto seja aplicado no checkout",
     "video_alt_text": "Descreva o vídeo para usuários de tecnologia assistiva",
     "video_autoplay": "Os vídeos ficarão sem som por padrão",
     "video_external": "Use um URL do YouTube ou do Vimeo",

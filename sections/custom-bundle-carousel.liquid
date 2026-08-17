@@ -5,11 +5,10 @@
 ></script>
 
 {% liquid
-  # Metafield overrides the customizer setting so the limit can be managed
-  # centrally via Admin API / apps (documented in README-custom-bundle-carousel.md).
   assign max_bundle_items = section.settings.max_bundle_items
-  if shop.metafields.custom.bundle_max_items.value != blank
-    assign max_bundle_items = shop.metafields.custom.bundle_max_items.value
+  assign metafield_max = shop.metafields.custom.bundle_max_items.value | times: 1
+  if metafield_max > 0
+    assign max_bundle_items = metafield_max
   endif
 
   assign discount_percentage = section.settings.discount_percentage
@@ -19,7 +18,6 @@
     when '1'
       assign mobile_card_size = 'calc(100cqw - 20px)'
     else
-      # 2 full cards on mobile: (100cqw - 2x10px gutter - 10px gap) / 2 — Figma 336:7035
       assign mobile_card_size = 'calc(50cqw - 15px)'
   endcase
 %}
@@ -111,7 +109,8 @@
                     </div>
                   {% else %}
                     <div class="bundle-carousel__select">
-                      {% assign checkbox_label = 'content.bundle_select_product' | t: title: product.title %}
+                      {% assign product_title_escaped = product.title | escape %}
+                      {% assign checkbox_label = 'content.bundle_select_product' | t: title: product_title_escaped %}
                       {% render 'checkbox',
                         id: checkbox_id,
                         name: checkbox_id,
@@ -149,11 +148,6 @@
 
       {% assign list_items_array = list_items | strip | split: '<!--@list/split-->' %}
 
-      {% comment %}
-        Same wrapper resource-list builds for its carousel layout. The snippet itself
-        needs settings.layout_type, which this section fixes to carousel, so the
-        wrapper is replicated here instead of adding a fake layout_type setting.
-      {% endcomment %}
       <div
         class="resource-list force-full-width resource-list__carousel"
         style="
@@ -172,6 +166,7 @@
         %}
       </div>
       {% render 'resource-list-styles' %}
+      {% render 'product-badges-styles' %}
 
       <div class="bundle-carousel__footer">
         <div class="bundle-carousel__summary" aria-live="polite">
@@ -215,7 +210,6 @@
     display: block;
   }
 
-  /* ── Header — type roles from the theme, sizes per Figma 336:7492 ── */
   .bundle-carousel__header {
     display: flex;
     flex-direction: column;
@@ -227,7 +221,6 @@
     font-family: var(--font-heading--family);
     font-weight: var(--font-heading--weight);
     font-style: var(--font-heading--style);
-    /* 20px, lh 1.2 — Figma 336:7492 */
     font-size: 1.25rem;
     line-height: 1.2;
     color: var(--color-foreground-heading, var(--color-foreground));
@@ -241,11 +234,9 @@
     color: var(--color-foreground);
   }
 
-  /* ── Card — Figma 336:7496 ── */
   .bundle-carousel__card {
     display: flex;
     flex-direction: column;
-    /* image→details 20px — Figma 336:7496 */
     gap: 20px;
     cursor: pointer;
   }
@@ -259,24 +250,21 @@
     width: 100%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    /* #FAFAFA — Figma 336:7497, exposed as card_background setting */
     background-color: var(--bundle-card-background);
   }
 
   .bundle-carousel__image {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Figma 336:7498 */
     mix-blend-mode: multiply;
-    display: block;
   }
 
   .bundle-carousel__image--placeholder {
     mix-blend-mode: normal;
   }
 
-  /* Checkbox occupies the corner slot the design gives its icon — Figma 336:7499 */
   .bundle-carousel__select {
     position: absolute;
     inset-block-start: 14px;
@@ -288,7 +276,7 @@
     width: 1px;
     height: 1px;
     overflow: hidden;
-    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
     white-space: nowrap;
   }
 
@@ -296,11 +284,9 @@
     background-color: var(--color-background);
   }
 
-  /* ── Details — Figma 336:7500 ── */
   .bundle-carousel__details {
     display: flex;
     flex-direction: column;
-    /* title→price 8px — Figma 336:7500 */
     gap: 8px;
     text-align: center;
   }
@@ -308,7 +294,6 @@
   .bundle-carousel__product-title {
     font-family: var(--font-body--family);
     font-weight: var(--font-body--weight);
-    /* 16px, lh 1.2, #030303 (dark-100) — Figma 336:7501; no theme variable matches */
     font-size: 1rem;
     line-height: 1.2;
     color: #030303;
@@ -322,7 +307,6 @@
   .bundle-carousel__price {
     font-family: var(--font-body--family);
     font-weight: var(--font-body--weight);
-    /* 14px, lh 1.2, rgba(3,3,3,0.8) (dark-80) — Figma 336:7502; no theme variable matches */
     font-size: 0.875rem;
     line-height: 1.2;
     color: rgba(3, 3, 3, 0.8);
@@ -332,7 +316,6 @@
     opacity: 0.6;
   }
 
-  /* ── Summary + CTA (not drawn in Figma — theme tokens only) ── */
   .bundle-carousel__footer {
     display: flex;
     flex-direction: column;
@@ -407,7 +390,6 @@
   }
 
   @media screen and (max-width: 749px) {
-    /* 50px block padding, 24px row gap, 10px gutters — Figma 336:7031 */
     .bundle-carousel .section {
       padding-block-start: 50px;
       padding-block-end: 50px;
@@ -416,22 +398,18 @@
     }
 
     .bundle-carousel .resource-list__carousel {
-      /* 10px between cards — Figma 336:7035 */
       --resource-list-column-gap: 10px;
     }
 
     .bundle-carousel__card {
-      /* image→details 16px — Figma 336:7036 */
       gap: 16px;
     }
 
-    /* Corner inset 12px on mobile — Figma 336:7039 */
     .bundle-carousel__select {
       inset-block-start: 12px;
       inset-inline-end: 12px;
     }
 
-    /* 18px — Figma 336:7032 */
     .bundle-carousel__title {
       font-size: 1.125rem;
     }
@@ -520,7 +498,7 @@
       "type": "range",
       "id": "columns",
       "label": "t:settings.columns",
-      "min": 3,
+      "min": 2,
       "max": 4,
       "step": 1,
       "default": 4
@@ -644,6 +622,7 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:settings.color_scheme",
+      "info": "t:info.bundle_card_palette",
       "default": "scheme-1"
     },
     {

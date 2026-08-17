@@ -5,26 +5,6 @@ import { CartLinesUpdateEvent, CartErrorEvent } from '@shopify/events';
 const SUCCESS_MESSAGE_DISPLAY_DURATION = 5000;
 const ERROR_MESSAGE_DISPLAY_DURATION = 10000;
 
-/**
- * Bundle carousel: checkbox selection with a configurable limit and a live
- * client-side discount preview. The preview mirrors the automatic discount
- * the merchant configures in the Shopify admin — it never applies the real
- * discount itself (see README-custom-bundle-carousel.md).
- *
- * @typedef {object} BundleCarouselRefs
- * @property {HTMLButtonElement} [addButton] - The add-bundle-to-cart button.
- * @property {HTMLElement} [addButtonLabel] - The label inside the button.
- * @property {HTMLElement} [counter] - The "x of y selected" counter.
- * @property {HTMLElement} [totalPrice] - The (discounted) total price.
- * @property {HTMLElement} [comparePrice] - The strikethrough original total wrapper.
- * @property {HTMLElement} [comparePriceAmount] - The strikethrough amount text.
- * @property {HTMLElement} [savings] - The "you save X" message.
- * @property {HTMLElement} [maxMessage] - The limit-reached message.
- * @property {HTMLElement} [errorMessage] - The cart error message.
- * @property {HTMLElement} [liveRegion] - Screen reader announcements.
- *
- * @extends {Component<BundleCarouselRefs>}
- */
 class BundleCarouselComponent extends Component {
   connectedCallback() {
     super.connectedCallback();
@@ -32,51 +12,35 @@ class BundleCarouselComponent extends Component {
     this.#updateState();
   }
 
-  /** @returns {HTMLInputElement[]} Checkboxes of selectable (in stock) products. */
   get #checkboxes() {
     return Array.from(this.querySelectorAll('.bundle-carousel__select .checkbox__input'));
   }
 
-  /** @returns {HTMLInputElement[]} */
   get #selectedCheckboxes() {
     return this.#checkboxes.filter((input) => input.checked);
   }
 
-  /** @returns {number} */
   get #maxItems() {
     return Math.max(1, Number(this.dataset.maxItems) || 1);
   }
 
-  /**
-   * Handles checkbox changes (delegated via on:change on the checkbox wrapper).
-   */
   onSelectionChange() {
     this.#updateState();
   }
 
-  /**
-   * Makes the whole card toggle its checkbox, keeping the input as the single
-   * source of truth. Clicks on the product link, the checkbox itself or the
-   * badge keep their native behaviour.
-   *
-   * @param {Event} event - The click event (target proxied to the card).
-   */
   toggleFromCard(event) {
     const origin = event.composedPath?.()[0] ?? event.target;
     if (!(origin instanceof Element)) return;
     if (origin.closest('a, .checkbox, .product-badges')) return;
 
-    const card = /** @type {Element} */ (event.target);
-    const input = /** @type {HTMLInputElement | null} */ (card.querySelector('.checkbox__input'));
+    const card = event.target;
+    const input = card.querySelector('.checkbox__input');
     if (!input || input.disabled) return;
 
     input.checked = !input.checked;
     this.#updateState();
   }
 
-  /**
-   * Recomputes counter, limit locking, totals and CTA state from the DOM.
-   */
   #updateState() {
     const checkboxes = this.#checkboxes;
     const selected = checkboxes.filter((input) => input.checked);
@@ -105,16 +69,13 @@ class BundleCarouselComponent extends Component {
     this.#updateTotals(selected);
   }
 
-  /**
-   * @param {HTMLInputElement[]} selected
-   */
   #updateTotals(selected) {
     const { totalPrice, comparePrice, comparePriceAmount, savings } = this.refs;
     if (!totalPrice) return;
 
     const total = selected.reduce((sum, input) => {
       const item = input.closest('[data-bundle-item]');
-      return sum + (Number(/** @type {HTMLElement | null} */ (item)?.dataset.price) || 0);
+      return sum + (Number(item?.dataset.price) || 0);
     }, 0);
 
     const percent = Number(this.dataset.discountPercentage) || 0;
@@ -137,15 +98,10 @@ class BundleCarouselComponent extends Component {
     }
   }
 
-  /**
-   * @param {number} cents - Amount in minor units.
-   * @returns {string}
-   */
   #formatMoney(cents) {
     return formatMoney(cents, this.dataset.moneyFormat ?? '${{ amount }}', this.dataset.currency ?? 'USD');
   }
 
-  /** @type {number[]} */
   #timeouts = [];
 
   disconnectedCallback() {
@@ -155,19 +111,13 @@ class BundleCarouselComponent extends Component {
     this.#timeouts = [];
   }
 
-  /**
-   * Adds the selected, in-stock products to the cart via the AJAX Cart API
-   * (/cart/add.js) in a single batch. If Shopify rejects the batch (e.g. stock
-   * changed since render), it retries per item with Promise.allSettled so one
-   * failing product never sinks the rest of the bundle.
-   */
   async addBundleToCart() {
     const { addButton } = this.refs;
     if (!addButton || addButton.hasAttribute('aria-busy')) return;
 
     const items = this.#selectedCheckboxes
       .map((input) => {
-        const item = /** @type {HTMLElement | null} */ (input.closest('[data-bundle-item]'));
+        const item = input.closest('[data-bundle-item]');
         if (!item || item.dataset.available !== 'true') return null;
 
         return {
@@ -180,7 +130,7 @@ class BundleCarouselComponent extends Component {
 
     if (items.length === 0) return;
 
-    this.#setLoading(true);
+    this.#startLoading();
     this.#hideError();
 
     const deferredEventPromise = CartLinesUpdateEvent.createPromise();
@@ -206,7 +156,6 @@ class BundleCarouselComponent extends Component {
       const data = await response.json();
 
       let added = items;
-      /** @type {typeof items} */
       let failed = [];
 
       if (data.status) {
@@ -254,12 +203,6 @@ class BundleCarouselComponent extends Component {
     }
   }
 
-  /**
-   * Fallback path: adds each item on its own request so per-item failures can
-   * be reported without breaking the rest of the bundle.
-   *
-   * @param {Array<{id: number, quantity: number, title: string} | null>} items
-   */
   async #addItemsIndividually(items) {
     const results = await Promise.allSettled(
       items.map((item) =>
@@ -275,9 +218,7 @@ class BundleCarouselComponent extends Component {
       )
     );
 
-    /** @type {typeof items} */
     const added = [];
-    /** @type {typeof items} */
     const failed = [];
     results.forEach((result, index) => {
       (result.status === 'fulfilled' ? added : failed).push(items[index] ?? null);
@@ -286,12 +227,7 @@ class BundleCarouselComponent extends Component {
     return { added, failed };
   }
 
-  /**
-   * Same cart refresh contract as Horizon's product-form: prefer the
-   * cart-items-component so the drawer re-renders, fall back to /cart.js.
-   */
   async #refreshCart() {
-    /** @type {import('@theme/component-cart-items').CartItemsComponent | null} */
     const cartItemsComponent = document.querySelector('cart-items-component');
 
     if (cartItemsComponent) {
@@ -307,34 +243,24 @@ class BundleCarouselComponent extends Component {
     return response.json();
   }
 
-  /** @returns {string[]} */
   #cartSectionIds() {
     return Array.from(document.querySelectorAll('cart-items-component'))
       .map((item) => (item instanceof HTMLElement ? item.dataset.sectionId : null))
       .filter((id) => typeof id === 'string');
   }
 
-  /**
-   * @param {boolean} loading
-   */
-  #setLoading(loading) {
+  #startLoading() {
     const { addButton, addButtonLabel } = this.refs;
     if (!addButton || !addButtonLabel) return;
 
-    if (loading) {
-      this.#defaultButtonLabel ??= addButtonLabel.textContent ?? '';
-      addButton.disabled = true;
-      addButton.setAttribute('aria-busy', 'true');
-      addButtonLabel.textContent = this.dataset.textAdding ?? '';
-    }
+    this.#defaultButtonLabel ??= addButtonLabel.textContent ?? '';
+    addButton.disabled = true;
+    addButton.setAttribute('aria-busy', 'true');
+    addButtonLabel.textContent = this.dataset.textAdding ?? '';
   }
 
-  /** @type {string | null} */
   #defaultButtonLabel = null;
 
-  /**
-   * @param {boolean} success
-   */
   #finishLoading(success) {
     const { addButton, addButtonLabel } = this.refs;
     if (!addButton || !addButtonLabel) return;
@@ -354,9 +280,6 @@ class BundleCarouselComponent extends Component {
     }
   }
 
-  /**
-   * @param {number} count - Number of items added.
-   */
   #announceAdded(count) {
     const { liveRegion } = this.refs;
     if (!liveRegion) return;
@@ -371,9 +294,6 @@ class BundleCarouselComponent extends Component {
     this.#timeouts.push(timeoutId);
   }
 
-  /**
-   * @param {string} message
-   */
   #showError(message) {
     const { errorMessage } = this.refs;
     if (!errorMessage) return;

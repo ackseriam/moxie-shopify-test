@@ -130,6 +130,12 @@
     "back_to_main_menu": "メインメニューに戻る"
   },
   "content": {
+    "bundle_selected_count": "{{ max }}点中{{ count }}点選択済み",
+    "bundle_max_reached": "このセットの上限である{{ max }}点に達しました",
+    "bundle_savings": "{{ amount }}お得（{{ percent }}%オフ）",
+    "bundle_select_product": "{{ title }}をセットに追加",
+    "bundle_add_error_partial": "追加できませんでした：{{ titles }}",
+    "bundle_onboarding": "テーマエディターで商品ブロックを追加してセットを作成してください",
     "reviews": "レビュー",
     "language": "言語",
     "localization_region_and_language": "地域と言語",

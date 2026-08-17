@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "Paket dönen ekranı",
     "404": "404",
     "custom_section": "Özel bölüm",
     "icon": "Simge",
@@ -171,6 +172,12 @@
     "disclosures": "Bildirimler"
   },
   "settings": {
+    "button_label": "Düğme etiketi",
+    "card_background": "Kart arka planı",
+    "discount_min_items": "İndirim için minimum ürün sayısı",
+    "discount_percentage": "Paket indirimi",
+    "max_bundle_items": "Paket başına maksimum ürün sayısı",
+    "subtitle": "Alt başlık",
     "autoplay": "Otomatik oynatma",
     "background": "Arka plan",
     "border_radius": "Köşe yarıçapı",
@@ -862,6 +869,7 @@
     "input_field": "Giriş alanı"
   },
   "content": {
+    "bundle": "Paket",
     "background_video": "Arka plan videosu",
     "describe_the_video_for": "Ekran okuyucu kullanan müşteriler için videoyu açıklayın. [Daha fazla bilgi edinin](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)",
     "width_is_automatically_optimized": "Genişlik, mobil cihazlar için otomatik olarak optimize edilir.",
@@ -1047,6 +1055,9 @@
     "introducing_p": "<p><em>Karşınızda</em></p>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "Paketi sepete ekle",
+    "bundle_subtitle": "Favorilerinizi seçin ve tasarruf edin",
+    "bundle_title": "Paketinizi oluşturun",
     "collapsible_row": "Daraltılabilir satır",
     "button_label": "Hemen alışveriş yap",
     "heading": "Başlık",
@@ -1085,6 +1096,9 @@
     "disclosures": "Bildirimler"
   },
   "info": {
+    "bundle_card_palette": "Kart metni ve görsel karışımı, tasarımın sabit açık paletini korur; koyu renk şemaları yalnızca bölümün arka planını ve özeti etkiler",
+    "bundle_max_metafield": "Mağazanın custom.bundle_max_items meta alanı ayarlandığında bu değer geçersiz kılınır",
+    "bundle_discount_preview": "Yalnızca mağaza önizlemesidir. Aynı indirimin ödeme sırasında uygulanması için Shopify yöneticisinde eşleşen bir otomatik indirim oluşturun",
     "video_alt_text": "Yardımcı teknoloji kullanıcıları için videoyu açıklayın",
     "video_autoplay": "Videolar varsayılan olarak sessize alınır",
     "video_external": "Bir YouTube veya Vimeo URL'si kullanın",

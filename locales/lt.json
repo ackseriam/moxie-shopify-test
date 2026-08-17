@@ -134,6 +134,12 @@
     "back_to_main_menu": "Atgal į pagrindinį meniu"
   },
   "content": {
+    "bundle_selected_count": "Pasirinkta {{ count }} iš {{ max }}",
+    "bundle_max_reached": "Pasiekėte šio rinkinio {{ max }} produktų limitą",
+    "bundle_savings": "Sutaupote {{ amount }} ({{ percent }} % nuolaida)",
+    "bundle_select_product": "Pridėti {{ title }} į rinkinį",
+    "bundle_add_error_partial": "Nepavyko pridėti: {{ titles }}",
+    "bundle_onboarding": "Pridėkite produktų blokus temos redaktoriuje, kad sudarytumėte rinkinį",
     "reviews": "apžvalgos (-ų; -a)",
     "language": "Kalba",
     "localization_region_and_language": "Regionas ir kalba",

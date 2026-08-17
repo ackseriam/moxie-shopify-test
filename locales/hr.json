@@ -132,6 +132,12 @@
     "back_to_main_menu": "Natrag na glavni izbornik"
   },
   "content": {
+    "bundle_selected_count": "Odabrano: {{ count }} od {{ max }}",
+    "bundle_max_reached": "Dosegnuli ste ograničenje od {{ max }} proizvoda za ovaj paket",
+    "bundle_savings": "Štedite {{ amount }} ({{ percent }} % popusta)",
+    "bundle_select_product": "Dodaj {{ title }} u paket",
+    "bundle_add_error_partial": "Dodavanje nije uspjelo: {{ titles }}",
+    "bundle_onboarding": "Dodajte blokove proizvoda u uređivaču teme kako biste sastavili paket",
     "reviews": "recenzije",
     "no_results_found": "Nema pronađenih rezultata",
     "language": "Jezik",

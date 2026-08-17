@@ -132,6 +132,12 @@
     "zoom_media": "Fă zoom pe elementul media {{ index }}"
   },
   "content": {
+    "bundle_selected_count": "{{ count }} din {{ max }} selectate",
+    "bundle_max_reached": "Ai atins limita de {{ max }} produse pentru acest pachet",
+    "bundle_savings": "Economisești {{ amount }} (reducere de {{ percent }}%)",
+    "bundle_select_product": "Adaugă {{ title }} la pachet",
+    "bundle_add_error_partial": "Nu s-a putut adăuga: {{ titles }}",
+    "bundle_onboarding": "Adaugă blocuri de produse în editorul de teme pentru a crea pachetul",
     "reviews": "recenzii",
     "language": "Limba",
     "localization_region_and_language": "Regiunea și limba",

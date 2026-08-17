@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "組合輪播",
     "404": "404",
     "colors": "調色盤",
     "custom_section": "自訂區段",
@@ -171,6 +172,12 @@
     "disclosures": "資訊揭露"
   },
   "settings": {
+    "button_label": "按鈕標籤",
+    "card_background": "卡片背景",
+    "discount_min_items": "享有折扣所需的最少商品數",
+    "discount_percentage": "組合折扣",
+    "max_bundle_items": "每個組合的商品數上限",
+    "subtitle": "副標題",
     "alignment": "對齊",
     "autoplay": "自動播放",
     "background": "背景",
@@ -862,6 +869,7 @@
     "input_field": "輸入欄位"
   },
   "content": {
+    "bundle": "組合",
     "advanced": "進階",
     "background_image": "背景圖片",
     "background_video": "背景影片",
@@ -1047,6 +1055,9 @@
     "introducing_p": "<p><em>全新推出</em></p>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "將組合加入購物車",
+    "bundle_subtitle": "挑選您的最愛並省錢",
+    "bundle_title": "打造您的組合",
     "button_label": "立即選購",
     "collapsible_row": "可摺疊列",
     "heading": "標題",
@@ -1085,6 +1096,9 @@
     "disclosures": "資訊揭露"
   },
   "info": {
+    "bundle_card_palette": "卡片文字和圖片混合會保留設計固定的淺色調色盤；深色顏色配置僅影響區段背景和摘要",
+    "bundle_max_metafield": "設定商店中繼資料欄位 custom.bundle_max_items 後，將以其為準",
+    "bundle_discount_preview": "僅供商店前台預覽。請在 Shopify 管理介面建立相符的自動折扣，以便在結帳時套用相同折扣",
     "carousel_layout_on_mobile": "在行動裝置上一律使用輪播",
     "video_alt_text": "為使用輔助技術的使用者描述影片",
     "video_autoplay": "影片預設為靜音播放",

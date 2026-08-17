@@ -30,6 +30,7 @@
     "text": "ٹیکسٹ"
   },
   "content": {
+    "bundle": "بنڈل",
     "visible_if_collection_has_more_products": "اگر کلیکشن میں دکھائے گئے پروڈکٹ سے زیادہ پروڈکٹ ہوں تو ظاہر ہوتا ہے",
     "advanced": "ایڈوانسڈ",
     "appearance": "ظاہری شکل",
@@ -215,6 +216,9 @@
     "work_quickly_to_ship": "<p>ہم جلد از جلد آپ کا آرڈر شپ کرنے کے لیے تیزی سے کام کریں گے۔ آپ کا آرڈر شپ ہونے کے بعد، آپ کو مزید معلومات کے ساتھ ایک ای میل موصول ہوگی۔ آپ کے مقام کے لحاظ سے ترسیل کے اوقات مختلف ہو سکتے ہیں۔</p>"
   },
   "info": {
+    "bundle_card_palette": "کارڈ کا متن اور تصویر کا امتزاج ڈیزائن کے مقررہ لائٹ پیلیٹ کو برقرار رکھتے ہیں؛ ڈارک کلر اسکیمیں صرف سیکشن کے پس منظر اور خلاصے پر اثر انداز ہوتی ہیں",
+    "bundle_max_metafield": "جب اسٹور کا میٹا فیلڈ custom.bundle_max_items سیٹ ہو تو یہ اس سے تبدیل ہو جاتا ہے",
+    "bundle_discount_preview": "صرف اسٹور فرنٹ کا پیش منظر ہے۔ چیک آؤٹ پر وہی رعایت لاگو کرنے کے لیے Shopify ایڈمن میں مماثل خودکار رعایت بنائیں",
     "actions_display_style": "موبائل پر ہمیشہ آئیکن استعمال ہوتے ہیں",
     "applies_on_image_only": "صرف تصاویر پر لاگو ہوتا ہے",
     "aspect_ratio_adjusted": "کچھ لے آؤٹ میں ایڈجسٹ کیا گیا",
@@ -244,6 +248,7 @@
     "media_type_info": "خصوصیات آپ کے مینو کے لنک سے پُر کی گئی ہیں"
   },
   "names": {
+    "bundle_carousel": "بنڈل کیرول",
     "column": "کالم",
     "product_title": "پروڈکٹ کا ٹائٹل",
     "custom_liquid": "کسٹم Liquid",
@@ -682,6 +687,12 @@
     "below_media": "میڈیا کے نیچے"
   },
   "settings": {
+    "button_label": "بٹن کا لیبل",
+    "card_background": "کارڈ کا پس منظر",
+    "discount_min_items": "رعایت کے لیے کم از کم پروڈکٹس",
+    "discount_percentage": "بنڈل کی رعایت",
+    "max_bundle_items": "فی بنڈل زیادہ سے زیادہ پروڈکٹس",
+    "subtitle": "ذیلی عنوان",
     "accordion": "ایکارڈین",
     "account": "اکاؤنٹ",
     "actions_display_style": "مینو کا اسٹائل",
@@ -1097,6 +1108,9 @@
     "bottom_row_text": "نچلی قطار کا متن"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "بنڈل کارٹ میں شامل کریں",
+    "bundle_subtitle": "اپنے پسندیدہ منتخب کریں اور بچت کریں",
+    "bundle_title": "اپنا بنڈل بنائیں",
     "accordion_heading": "ایکارڈین کی سرخی",
     "are_purchases_final_sale": "کیا کوئی بھی خریداری حتمی سیل ہے؟",
     "be_bold": "نڈر بنیں۔",

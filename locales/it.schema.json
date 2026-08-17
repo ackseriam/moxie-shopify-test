@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "Carosello bundle",
     "404": "404",
     "colors": "Palette colori",
     "custom_section": "Sezione personalizzata",
@@ -171,6 +172,12 @@
     "disclosures": "Informative"
   },
   "settings": {
+    "button_label": "Etichetta del pulsante",
+    "card_background": "Sfondo della scheda",
+    "discount_min_items": "Numero minimo di prodotti per lo sconto",
+    "discount_percentage": "Sconto bundle",
+    "max_bundle_items": "Numero massimo di prodotti per bundle",
+    "subtitle": "Sottotitolo",
     "alignment": "Allineamento",
     "autoplay": "Riproduzione automatica",
     "background": "Sfondo",
@@ -862,6 +869,7 @@
     "input_field": "Campo di inserimento"
   },
   "content": {
+    "bundle": "Bundle",
     "advanced": "Avanzate",
     "background_image": "Immagine di sfondo",
     "background_video": "Video di sfondo",
@@ -1047,6 +1055,9 @@
     "featured_collection_h3": "<h3>Collezione in primo piano</h3>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "Aggiungi il bundle al carrello",
+    "bundle_subtitle": "Scegli i tuoi preferiti e risparmia",
+    "bundle_title": "Crea il tuo bundle",
     "button_label": "Acquista ora",
     "collapsible_row": "Riga comprimibile",
     "heading": "Intestazione",
@@ -1085,6 +1096,9 @@
     "disclosures": "Informative"
   },
   "info": {
+    "bundle_card_palette": "Il testo della scheda e la fusione dell’immagine mantengono la palette chiara fissa del design; gli schemi di colori scuri influiscono solo sullo sfondo della sezione e sul riepilogo",
+    "bundle_max_metafield": "Sostituito dal metafield del negozio custom.bundle_max_items quando è impostato",
+    "bundle_discount_preview": "Solo anteprima del negozio online. Crea uno sconto automatico corrispondente nel pannello di controllo Shopify affinché lo stesso sconto venga applicato al check-out",
     "carousel_layout_on_mobile": "Sui dispositivi mobili viene sempre utilizzato il carosello.",
     "video_alt_text": "Descrivi il video per gli utenti di tecnologie assistive",
     "video_autoplay": "I video saranno senza audio per impostazione predefinita",

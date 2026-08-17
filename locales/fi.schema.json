@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "Pakettikaruselli",
     "404": "404",
     "colors": "Väripaletti",
     "custom_section": "Mukautettu osio",
@@ -171,6 +172,12 @@
     "disclosures": "Ilmoitukset"
   },
   "settings": {
+    "button_label": "Painikkeen merkintä",
+    "card_background": "Kortin tausta",
+    "discount_min_items": "Alennuksen vähimmäistuotemäärä",
+    "discount_percentage": "Paketin alennus",
+    "max_bundle_items": "Tuotteiden enimmäismäärä pakettia kohden",
+    "subtitle": "Alaotsikko",
     "alignment": "Tasaus",
     "autoplay": "Automaattinen toisto",
     "background": "Tausta",
@@ -862,6 +869,7 @@
     "input_field": "Syöttökenttä"
   },
   "content": {
+    "bundle": "Paketti",
     "advanced": "Lisäasetukset",
     "background_image": "Taustakuva",
     "background_video": "Taustavideo",
@@ -1047,6 +1055,9 @@
     "featured_collection_h3": "<h3>Esittelyssä oleva kokoelma</h3>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "Lisää paketti ostoskoriin",
+    "bundle_subtitle": "Valitse suosikkisi ja säästä",
+    "bundle_title": "Kokoa oma pakettisi",
     "button_label": "Osta nyt",
     "collapsible_row": "Kutistettava rivi",
     "heading": "Otsikko",
@@ -1085,6 +1096,9 @@
     "disclosures": "Ilmoitukset"
   },
   "info": {
+    "bundle_card_palette": "Kortin teksti ja kuvan sekoitus säilyttävät suunnittelun kiinteän vaalean paletin; tummat värimallit vaikuttavat vain osion taustaan ja yhteenvetoon",
+    "bundle_max_metafield": "Ohitetaan kaupan metakentällä custom.bundle_max_items, kun se on asetettu",
+    "bundle_discount_preview": "Vain kaupan esikatselu. Luo vastaava automaattinen alennus Shopify-ylläpidossa, jotta sama alennus otetaan käyttöön kassalla",
     "carousel_layout_on_mobile": "Mobiilissa käytetään aina karusellia.",
     "video_alt_text": "Kuvaile video avustavan teknologian käyttäjille",
     "video_autoplay": "Videot mykistetään oletusarvoisesti",

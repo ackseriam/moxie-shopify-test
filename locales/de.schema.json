@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "Bundle-Karussell",
     "404": "404",
     "custom_section": "Benutzerdefinierter Abschnitt",
     "icon": "Symbol",
@@ -171,6 +172,12 @@
     "disclosures": "Pflichtangaben"
   },
   "settings": {
+    "button_label": "Button-Label",
+    "card_background": "Kartenhintergrund",
+    "discount_min_items": "Mindestanzahl an Produkten für den Rabatt",
+    "discount_percentage": "Bundle-Rabatt",
+    "max_bundle_items": "Maximale Anzahl an Produkten pro Bundle",
+    "subtitle": "Untertitel",
     "autoplay": "Autoplay",
     "background": "Hintergrund",
     "border_radius": "Eckenradius",
@@ -862,6 +869,7 @@
     "input_field": "Eingabefeld"
   },
   "content": {
+    "bundle": "Bundle",
     "background_video": "Hintergrundvideo",
     "describe_the_video_for": "Beschreibe das Video für Kunden, die Bildschirmlesegeräte benutzen. [Mehr Informationen](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)",
     "width_is_automatically_optimized": "Die Breite wird für Mobilgeräte automatisch optimiert.",
@@ -1047,6 +1055,9 @@
     "featured_collection_h3": "<h3>Vorgestellte Kategorie</h3>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "Bundle zum Warenkorb hinzufügen",
+    "bundle_subtitle": "Wähle deine Favoriten und spare",
+    "bundle_title": "Stelle dein Bundle zusammen",
     "collapsible_row": "Einklappbare Zeile",
     "button_label": "Jetzt einkaufen",
     "heading": "Überschrift",
@@ -1085,6 +1096,9 @@
     "disclosures": "Pflichtangaben"
   },
   "info": {
+    "bundle_card_palette": "Kartentext und Bildüberblendung behalten die feste helle Farbpalette des Designs bei; dunkle Farbschemata wirken sich nur auf den Hintergrund des Abschnitts und die Zusammenfassung aus",
+    "bundle_max_metafield": "Wird durch das Shop-Metafeld custom.bundle_max_items überschrieben, wenn es gesetzt ist",
+    "bundle_discount_preview": "Nur Storefront-Vorschau. Erstelle einen passenden automatischen Rabatt im Shopify-Adminbereich, damit derselbe Rabatt beim Checkout angewendet wird",
     "video_alt_text": "Beschreibe das Video für Benutzer von Hilfstechnologien",
     "video_autoplay": "Videos werden standardmäßig stummgeschaltet",
     "video_external": "Verwende eine YouTube- oder Vimeo-URL",

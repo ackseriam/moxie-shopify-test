@@ -132,6 +132,12 @@
     "back_to_main_menu": "Voltar ao menu principal"
   },
   "content": {
+    "bundle_selected_count": "{{ count }} de {{ max }} selecionados",
+    "bundle_max_reached": "Atingiu o limite de {{ max }} produtos para este pack",
+    "bundle_savings": "Poupa {{ amount }} ({{ percent }}% de desconto)",
+    "bundle_select_product": "Adicionar {{ title }} ao pack",
+    "bundle_add_error_partial": "Não foi possível adicionar: {{ titles }}",
+    "bundle_onboarding": "Adicione blocos de produto no editor de tema para criar o pack",
     "reviews": "avaliações",
     "language": "Idioma",
     "localization_region_and_language": "Região e idioma",

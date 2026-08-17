@@ -132,6 +132,12 @@
     "back_to_main_menu": "Torna al menu principale"
   },
   "content": {
+    "bundle_selected_count": "{{ count }} di {{ max }} selezionati",
+    "bundle_max_reached": "Hai raggiunto il limite di {{ max }} prodotti per questo bundle",
+    "bundle_savings": "Risparmi {{ amount }} (sconto del {{ percent }}%)",
+    "bundle_select_product": "Aggiungi {{ title }} al bundle",
+    "bundle_add_error_partial": "Impossibile aggiungere: {{ titles }}",
+    "bundle_onboarding": "Aggiungi blocchi prodotto nell’editor del tema per creare il bundle",
     "reviews": "recensioni",
     "no_results_found": "Nessun risultato trovato",
     "language": "Lingua",
