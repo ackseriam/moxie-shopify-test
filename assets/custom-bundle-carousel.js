@@ -1,5 +1,9 @@
 import { Component } from '@theme/component';
 import { formatMoney } from '@theme/money-formatting';
+import { CartLinesUpdateEvent, CartErrorEvent } from '@shopify/events';
+
+const SUCCESS_MESSAGE_DISPLAY_DURATION = 5000;
+const ERROR_MESSAGE_DISPLAY_DURATION = 10000;
 
 /**
  * Bundle carousel: checkbox selection with a configurable limit and a live
@@ -139,6 +143,256 @@ class BundleCarouselComponent extends Component {
    */
   #formatMoney(cents) {
     return formatMoney(cents, this.dataset.moneyFormat ?? '${{ amount }}', this.dataset.currency ?? 'USD');
+  }
+
+  /** @type {number[]} */
+  #timeouts = [];
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+
+    this.#timeouts.forEach((id) => clearTimeout(id));
+    this.#timeouts = [];
+  }
+
+  /**
+   * Adds the selected, in-stock products to the cart via the AJAX Cart API
+   * (/cart/add.js) in a single batch. If Shopify rejects the batch (e.g. stock
+   * changed since render), it retries per item with Promise.allSettled so one
+   * failing product never sinks the rest of the bundle.
+   */
+  async addBundleToCart() {
+    const { addButton } = this.refs;
+    if (!addButton || addButton.hasAttribute('aria-busy')) return;
+
+    const items = this.#selectedCheckboxes
+      .map((input) => {
+        const item = /** @type {HTMLElement | null} */ (input.closest('[data-bundle-item]'));
+        if (!item || item.dataset.available !== 'true') return null;
+
+        return {
+          id: Number(item.dataset.variantId),
+          quantity: 1,
+          title: item.dataset.productTitle ?? '',
+        };
+      })
+      .filter((item) => item !== null && Number.isFinite(item.id) && item.id > 0);
+
+    if (items.length === 0) return;
+
+    this.#setLoading(true);
+    this.#hideError();
+
+    const deferredEventPromise = CartLinesUpdateEvent.createPromise();
+
+    this.dispatchEvent(
+      new CartLinesUpdateEvent({
+        action: 'add',
+        context: 'product',
+        lines: items.map((item) => ({ merchandiseId: String(item.id), quantity: item.quantity })),
+        promise: deferredEventPromise.promise,
+      })
+    );
+
+    try {
+      const response = await fetch(Theme.routes.cart_add_url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          items: items.map(({ id, quantity }) => ({ id, quantity })),
+          sections: this.#cartSectionIds().join(','),
+        }),
+      });
+      const data = await response.json();
+
+      let added = items;
+      /** @type {typeof items} */
+      let failed = [];
+
+      if (data.status) {
+        ({ added, failed } = await this.#addItemsIndividually(items));
+      }
+
+      const cart = await this.#refreshCart();
+      deferredEventPromise.resolve({
+        cart: CartLinesUpdateEvent.createCartFromAjaxResponse(cart),
+        detail: {
+          items: cart.items,
+          source: 'bundle-carousel-component',
+          sourceId: this.id,
+          itemCount: added.length,
+          sections: data.sections,
+          didError: failed.length > 0,
+        },
+      });
+
+      if (added.length === 0) {
+        this.dispatchEvent(
+          new CartErrorEvent({ error: data.message || 'Add to cart failed', code: 'INVALID' })
+        );
+        this.#showError(this.dataset.textError ?? '');
+        this.#finishLoading(false);
+      } else {
+        if (failed.length > 0) {
+          const titles = failed.map((item) => item?.title).join(', ');
+          this.#showError((this.dataset.textErrorPartial ?? '').replace('{{ titles }}', titles));
+        }
+        this.#announceAdded(added.length);
+        this.#finishLoading(true);
+      }
+    } catch (error) {
+      console.error(error);
+      deferredEventPromise.reject(error);
+      this.dispatchEvent(
+        new CartErrorEvent({
+          error: error instanceof Error ? error.message : 'Network error during add to cart',
+          code: 'SERVICE_UNAVAILABLE',
+        })
+      );
+      this.#showError(this.dataset.textError ?? '');
+      this.#finishLoading(false);
+    }
+  }
+
+  /**
+   * Fallback path: adds each item on its own request so per-item failures can
+   * be reported without breaking the rest of the bundle.
+   *
+   * @param {Array<{id: number, quantity: number, title: string} | null>} items
+   */
+  async #addItemsIndividually(items) {
+    const results = await Promise.allSettled(
+      items.map((item) =>
+        fetch(Theme.routes.cart_add_url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ items: [{ id: item?.id, quantity: item?.quantity }] }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.status) throw new Error(data.message || 'Add to cart failed');
+          })
+      )
+    );
+
+    /** @type {typeof items} */
+    const added = [];
+    /** @type {typeof items} */
+    const failed = [];
+    results.forEach((result, index) => {
+      (result.status === 'fulfilled' ? added : failed).push(items[index] ?? null);
+    });
+
+    return { added, failed };
+  }
+
+  /**
+   * Same cart refresh contract as Horizon's product-form: prefer the
+   * cart-items-component so the drawer re-renders, fall back to /cart.js.
+   */
+  async #refreshCart() {
+    /** @type {import('@theme/component-cart-items').CartItemsComponent | null} */
+    const cartItemsComponent = document.querySelector('cart-items-component');
+
+    if (cartItemsComponent) {
+      await customElements.whenDefined('cart-items-component');
+      return cartItemsComponent.fetchCartData();
+    }
+
+    const response = await fetch(`${Theme.routes.cart_url}.json`, {
+      headers: { Accept: 'application/json' },
+      credentials: 'same-origin',
+    });
+    if (!response.ok) throw new Error(`Failed to fetch cart: ${response.status}`);
+    return response.json();
+  }
+
+  /** @returns {string[]} */
+  #cartSectionIds() {
+    return Array.from(document.querySelectorAll('cart-items-component'))
+      .map((item) => (item instanceof HTMLElement ? item.dataset.sectionId : null))
+      .filter((id) => typeof id === 'string');
+  }
+
+  /**
+   * @param {boolean} loading
+   */
+  #setLoading(loading) {
+    const { addButton, addButtonLabel } = this.refs;
+    if (!addButton || !addButtonLabel) return;
+
+    if (loading) {
+      this.#defaultButtonLabel ??= addButtonLabel.textContent ?? '';
+      addButton.disabled = true;
+      addButton.setAttribute('aria-busy', 'true');
+      addButtonLabel.textContent = this.dataset.textAdding ?? '';
+    }
+  }
+
+  /** @type {string | null} */
+  #defaultButtonLabel = null;
+
+  /**
+   * @param {boolean} success
+   */
+  #finishLoading(success) {
+    const { addButton, addButtonLabel } = this.refs;
+    if (!addButton || !addButtonLabel) return;
+
+    if (success) {
+      addButtonLabel.textContent = this.dataset.textAdded ?? '';
+      const timeoutId = setTimeout(() => {
+        addButtonLabel.textContent = this.#defaultButtonLabel ?? '';
+        addButton.removeAttribute('aria-busy');
+        this.#updateState();
+      }, 2000);
+      this.#timeouts.push(timeoutId);
+    } else {
+      addButtonLabel.textContent = this.#defaultButtonLabel ?? '';
+      addButton.removeAttribute('aria-busy');
+      this.#updateState();
+    }
+  }
+
+  /**
+   * @param {number} count - Number of items added.
+   */
+  #announceAdded(count) {
+    const { liveRegion } = this.refs;
+    if (!liveRegion) return;
+
+    const template =
+      count === 1 ? Theme.translations.items_added_to_cart_one : Theme.translations.items_added_to_cart_other;
+    liveRegion.textContent = (template ?? '').replace('{{ count }}', String(count));
+
+    const timeoutId = setTimeout(() => {
+      liveRegion.textContent = '';
+    }, SUCCESS_MESSAGE_DISPLAY_DURATION);
+    this.#timeouts.push(timeoutId);
+  }
+
+  /**
+   * @param {string} message
+   */
+  #showError(message) {
+    const { errorMessage } = this.refs;
+    if (!errorMessage) return;
+
+    errorMessage.textContent = message;
+    errorMessage.classList.remove('hidden');
+
+    const timeoutId = setTimeout(() => {
+      this.#hideError();
+    }, ERROR_MESSAGE_DISPLAY_DURATION);
+    this.#timeouts.push(timeoutId);
+  }
+
+  #hideError() {
+    const { errorMessage } = this.refs;
+    if (!errorMessage) return;
+
+    errorMessage.textContent = '';
+    errorMessage.classList.add('hidden');
   }
 }
 
