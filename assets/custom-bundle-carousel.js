@@ -6,11 +6,18 @@ const SUCCESS_MESSAGE_DISPLAY_DURATION = 5000;
 const ERROR_MESSAGE_DISPLAY_DURATION = 10000;
 
 class BundleCarouselComponent extends Component {
+  #abortController = new AbortController();
+
   connectedCallback() {
     super.connectedCallback();
 
     this.#updateState();
+    window.addEventListener('pageshow', this.#onPageShow, { signal: this.#abortController.signal });
   }
+
+  #onPageShow = () => {
+    this.#updateState();
+  };
 
   get #checkboxes() {
     return Array.from(this.querySelectorAll('.bundle-carousel__select .checkbox__input'));
@@ -107,6 +114,7 @@ class BundleCarouselComponent extends Component {
   disconnectedCallback() {
     super.disconnectedCallback();
 
+    this.#abortController.abort();
     this.#timeouts.forEach((id) => clearTimeout(id));
     this.#timeouts = [];
   }
