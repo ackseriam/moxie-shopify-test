@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "Paketkarusell",
     "404": "404",
     "colors": "Färgpalett",
     "custom_section": "Anpassad sektion",
@@ -171,6 +172,12 @@
     "disclosures": "Upplysningar"
   },
   "settings": {
+    "button_label": "Knappetikett",
+    "card_background": "Kortbakgrund",
+    "discount_min_items": "Minsta antal produkter för rabatt",
+    "discount_percentage": "Paketrabatt",
+    "max_bundle_items": "Maximalt antal produkter per paket",
+    "subtitle": "Undertitel",
     "alignment": "Justering",
     "autoplay": "Autouppspelning",
     "background": "Bakgrund",
@@ -862,6 +869,7 @@
     "input_field": "Inmatningsfält"
   },
   "content": {
+    "bundle": "Paket",
     "advanced": "Avancerat",
     "background_image": "Bakgrundsbild",
     "background_video": "Bakgrundsvideo",
@@ -1047,6 +1055,9 @@
     "featured_collection_h3": "<h3>Utvald kollektion</h3>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "Lägg paketet i varukorgen",
+    "bundle_subtitle": "Välj dina favoriter och spara",
+    "bundle_title": "Sätt ihop ditt paket",
     "button_label": "Handla nu",
     "collapsible_row": "Komprimerbar rad",
     "heading": "Rubrik",
@@ -1085,6 +1096,9 @@
     "disclosures": "Upplysningar"
   },
   "info": {
+    "bundle_card_palette": "Kortets text och bildblandning behåller designens fasta ljusa palett; mörka färgscheman påverkar bara sektionens bakgrund och sammanfattningen",
+    "bundle_max_metafield": "Åsidosätts av butikens metafält custom.bundle_max_items när det är angivet",
+    "bundle_discount_preview": "Endast förhandsvisning i butiken. Skapa en motsvarande automatisk rabatt i Shopify-adminpanelen så att samma rabatt tillämpas i kassan",
     "video_alt_text": "Beskriv videon för användare av hjälpmedelsteknik",
     "video_autoplay": "Videor kommer att vara tystade som standard",
     "video_external": "Använd en URL från YouTube eller Vimeo",

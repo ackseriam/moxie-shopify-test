@@ -324,6 +324,64 @@
         "padding-block-end": 0
       }
     },
+    "custom_bundle_carousel_kNx3Tq": {
+      "type": "custom-bundle-carousel",
+      "blocks": {
+        "bundle_product_1": {
+          "type": "product",
+          "settings": {
+            "product": "the-complete-snowboard"
+          }
+        },
+        "bundle_product_2": {
+          "type": "product",
+          "settings": {
+            "product": "the-collection-snowboard-liquid"
+          }
+        },
+        "bundle_product_3": {
+          "type": "product",
+          "settings": {
+            "product": "the-compare-at-price-snowboard"
+          }
+        },
+        "bundle_product_4": {
+          "type": "product",
+          "settings": {
+            "product": "the-multi-location-snowboard"
+          }
+        },
+        "bundle_product_5": {
+          "type": "product",
+          "settings": {
+            "product": "the-out-of-stock-snowboard"
+          }
+        }
+      },
+      "block_order": [
+        "bundle_product_1",
+        "bundle_product_2",
+        "bundle_product_3",
+        "bundle_product_4",
+        "bundle_product_5"
+      ],
+      "settings": {
+        "max_bundle_items": 3,
+        "discount_percentage": 15,
+        "discount_min_items": 2,
+        "columns": 4,
+        "mobile_columns": "2",
+        "columns_gap": 20,
+        "card_background": "#FAFAFA",
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "gap": 20,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
     "product_recommendations_qggXJq": {
       "type": "product-recommendations",
       "blocks": {
@@ -469,6 +527,7 @@
   },
   "order": [
     "main",
+    "custom_bundle_carousel_kNx3Tq",
     "product_recommendations_qggXJq"
   ]
 }

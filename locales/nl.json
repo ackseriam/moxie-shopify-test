@@ -130,6 +130,12 @@
     "back_to_main_menu": "Terug naar hoofdmenu"
   },
   "content": {
+    "bundle_selected_count": "{{ count }} van {{ max }} geselecteerd",
+    "bundle_max_reached": "Je hebt de limiet van {{ max }} producten voor deze bundel bereikt",
+    "bundle_savings": "Je bespaart {{ amount }} ({{ percent }}% korting)",
+    "bundle_select_product": "Voeg {{ title }} toe aan de bundel",
+    "bundle_add_error_partial": "Kon niet worden toegevoegd: {{ titles }}",
+    "bundle_onboarding": "Voeg productblokken toe in de thema-editor om de bundel samen te stellen",
     "reviews": "recensies",
     "no_results_found": "Geen resultaten gevonden",
     "language": "Taal",

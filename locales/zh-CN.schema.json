@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "套装轮播",
     "404": "404",
     "colors": "调色板",
     "custom_section": "自定义分区",
@@ -171,6 +172,12 @@
     "disclosures": "披露信息"
   },
   "settings": {
+    "button_label": "按钮标签",
+    "card_background": "卡片背景",
+    "discount_min_items": "享受折扣所需的最少产品数",
+    "discount_percentage": "套装折扣",
+    "max_bundle_items": "每个套装的最大产品数",
+    "subtitle": "副标题",
     "alignment": "对齐方式",
     "autoplay": "自动播放",
     "background": "背景",
@@ -862,6 +869,7 @@
     "input_field": "输入字段"
   },
   "content": {
+    "bundle": "套装",
     "advanced": "高级",
     "background_image": "背景图片",
     "background_video": "背景视频",
@@ -1047,6 +1055,9 @@
     "featured_collection_h3": "<h3>特色系列</h3>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "将套装添加到购物车",
+    "bundle_subtitle": "挑选您的最爱并节省",
+    "bundle_title": "创建您的套装",
     "button_label": "立即购买",
     "collapsible_row": "可折叠行",
     "heading": "标题",
@@ -1085,6 +1096,9 @@
     "disclosures": "披露信息"
   },
   "info": {
+    "bundle_card_palette": "卡片文本和图片混合保持设计固定的浅色调色板；深色配色方案仅影响分区背景和摘要",
+    "bundle_max_metafield": "设置商店元字段 custom.bundle_max_items 后，将被其覆盖",
+    "bundle_discount_preview": "仅为店面预览。请在 Shopify 后台创建相应的自动折扣，以便在结账时应用相同的折扣",
     "video_alt_text": "为使用辅助技术的用户描述视频",
     "video_autoplay": "视频将默认静音",
     "video_external": "使用 YouTube 或 Vimeo URL",

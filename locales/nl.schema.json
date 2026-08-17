@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "Bundelcarrousel",
     "404": "404",
     "custom_section": "Aangepaste sectie",
     "icon": "Pictogram",
@@ -171,6 +172,12 @@
     "disclosures": "Toelichtingen"
   },
   "settings": {
+    "button_label": "Knoplabel",
+    "card_background": "Kaartachtergrond",
+    "discount_min_items": "Minimaal aantal producten voor korting",
+    "discount_percentage": "Bundelkorting",
+    "max_bundle_items": "Maximaal aantal producten per bundel",
+    "subtitle": "Ondertitel",
     "autoplay": "Automatisch afspelen",
     "background": "Achtergrond",
     "border_radius": "Hoekradius",
@@ -862,6 +869,7 @@
     "input_field": "Invoerveld"
   },
   "content": {
+    "bundle": "Bundel",
     "background_video": "Achtergrondvideo",
     "describe_the_video_for": "Geef een beschrijving van de video voor klanten die schermlezers gebruiken. [Meer informatie](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)",
     "width_is_automatically_optimized": "Breedte wordt automatisch geoptimaliseerd voor mobiel.",
@@ -1047,6 +1055,9 @@
     "featured_collection_h3": "<h3>Uitgelichte collectie</h3>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "Bundel toevoegen aan winkelwagen",
+    "bundle_subtitle": "Kies je favorieten en bespaar",
+    "bundle_title": "Stel je bundel samen",
     "collapsible_row": "Inklapbare rij",
     "button_label": "Shop nu",
     "heading": "Kop",
@@ -1085,6 +1096,9 @@
     "disclosures": "Toelichtingen"
   },
   "info": {
+    "bundle_card_palette": "De kaarttekst en beeldovervloeiing behouden het vaste lichte kleurenpalet van het ontwerp; donkere kleurenschema’s zijn alleen van invloed op de achtergrond van de sectie en de samenvatting",
+    "bundle_max_metafield": "Wordt overschreven door het shop-metaveld custom.bundle_max_items wanneer dit is ingesteld",
+    "bundle_discount_preview": "Alleen een voorbeeld in de webshop. Maak een overeenkomstige automatische korting aan in het Shopify-beheercentrum, zodat dezelfde korting bij het afrekenen wordt toegepast",
     "carousel_layout_on_mobile": "Op mobiel wordt altijd een carrousel gebruikt",
     "video_alt_text": "Beschrijf de video voor gebruikers van ondersteunende technologie",
     "video_autoplay": "Video's worden standaard gedempt",

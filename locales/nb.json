@@ -130,6 +130,12 @@
     "zoom_media": "Zoom medier {{ index }}"
   },
   "content": {
+    "bundle_selected_count": "{{ count }} av {{ max }} valgt",
+    "bundle_max_reached": "Du har nådd grensen på {{ max }} produkter for denne pakken",
+    "bundle_savings": "Du sparer {{ amount }} ({{ percent }} % rabatt)",
+    "bundle_select_product": "Legg til {{ title }} i pakken",
+    "bundle_add_error_partial": "Kunne ikke legge til: {{ titles }}",
+    "bundle_onboarding": "Legg til produktblokker i temaredigeringsverktøyet for å sette sammen pakken",
     "reviews": "anmeldelser",
     "no_results_found": "Fant ingen resultater",
     "language": "Språk",

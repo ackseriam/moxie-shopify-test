@@ -167,6 +167,12 @@
     "taxes_included": "Impuestos incluidos.",
     "product_badge_sold_out": "Agotado",
     "product_badge_sale": "Oferta",
+    "bundle_selected_count": "{{ count }} de {{ max }} seleccionados",
+    "bundle_max_reached": "Alcanzaste el límite de {{ max }} productos para este bundle",
+    "bundle_savings": "Ahorras {{ amount }} ({{ percent }}% de descuento)",
+    "bundle_select_product": "Añadir {{ title }} al bundle",
+    "bundle_add_error_partial": "No se pudo añadir: {{ titles }}",
+    "bundle_onboarding": "Añade bloques de producto en el editor del tema para armar el bundle",
     "grid_view": {
       "default_view": "Predeterminado",
       "grid_fieldset": "Columna de cuadrícula",

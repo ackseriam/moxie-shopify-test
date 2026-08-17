@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "Carrousel de pack",
     "404": "404",
     "custom_section": "Section personnalisée",
     "icon": "Icône",
@@ -171,6 +172,12 @@
     "disclosures": "Divulgations"
   },
   "settings": {
+    "button_label": "Libellé du bouton",
+    "card_background": "Arrière-plan de la carte",
+    "discount_min_items": "Nombre minimum de produits pour la réduction",
+    "discount_percentage": "Réduction du pack",
+    "max_bundle_items": "Nombre maximum de produits par pack",
+    "subtitle": "Sous-titre",
     "autoplay": "Lecture automatique",
     "background": "Arrière-plan",
     "border_radius": "Rayon de la bordure",
@@ -862,6 +869,7 @@
     "input_field": "Champ de saisie"
   },
   "content": {
+    "bundle": "Pack",
     "background_video": "Vidéo de fond",
     "describe_the_video_for": "Décrivez la vidéo pour les clients utilisant des lecteurs d’écran. [En savoir plus](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)",
     "width_is_automatically_optimized": "La largeur est automatiquement optimisée pour les appareils mobiles.",
@@ -1047,6 +1055,9 @@
     "featured_collection_h3": "<h3>Collection en vedette</h3>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "Ajouter le pack au panier",
+    "bundle_subtitle": "Choisissez vos favoris et économisez",
+    "bundle_title": "Composez votre pack",
     "collapsible_row": "Rangée réductible",
     "button_label": "Acheter maintenant",
     "heading": "Titre",
@@ -1085,6 +1096,9 @@
     "disclosures": "Divulgations"
   },
   "info": {
+    "bundle_card_palette": "Le texte de la carte et le fondu de l’image conservent la palette claire fixe du design ; les combinaisons de couleurs sombres n’affectent que l’arrière-plan de la section et le récapitulatif",
+    "bundle_max_metafield": "Remplacé par le métachamp de boutique custom.bundle_max_items lorsqu’il est défini",
+    "bundle_discount_preview": "Aperçu de la boutique en ligne uniquement. Créez une réduction automatique correspondante dans l’interface administrateur Shopify pour que la même réduction soit appliquée au paiement",
     "carousel_layout_on_mobile": "Le carrousel est toujours utilisé sur mobile",
     "video_alt_text": "Décrivez la vidéo pour les utilisateurs de technologies d’assistance",
     "video_autoplay": "Les vidéos seront mises en sourdine par défaut",

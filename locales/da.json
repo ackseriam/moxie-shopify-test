@@ -130,6 +130,12 @@
     "back_to_main_menu": "Tilbage til hovedmenu"
   },
   "content": {
+    "bundle_selected_count": "{{ count }} af {{ max }} valgt",
+    "bundle_max_reached": "Du har nået grænsen på {{ max }} produkter for denne pakke",
+    "bundle_savings": "Du sparer {{ amount }} ({{ percent }} % rabat)",
+    "bundle_select_product": "Føj {{ title }} til pakken",
+    "bundle_add_error_partial": "Kunne ikke tilføjes: {{ titles }}",
+    "bundle_onboarding": "Tilføj produktblokke i temaeditoren for at sammensætte pakken",
     "reviews": "anmeldelser",
     "language": "Sprog",
     "localization_region_and_language": "Område og sprog",

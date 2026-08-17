@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "Karuzela zestawu",
     "404": "404",
     "custom_section": "Sekcja niestandardowa",
     "icon": "Ikona",
@@ -171,6 +172,12 @@
     "disclosures": "Informacje prawne"
   },
   "settings": {
+    "button_label": "Etykieta przycisku",
+    "card_background": "Tło karty",
+    "discount_min_items": "Minimalna liczba produktów do rabatu",
+    "discount_percentage": "Rabat na zestaw",
+    "max_bundle_items": "Maksymalna liczba produktów w zestawie",
+    "subtitle": "Podtytuł",
     "autoplay": "Autoodtwarzanie",
     "background": "Tło",
     "border_radius": "Promień narożnika",
@@ -862,6 +869,7 @@
     "input_field": "Pole wprowadzania"
   },
   "content": {
+    "bundle": "Zestaw",
     "background_video": "Wideo w tle",
     "describe_the_video_for": "Opisz film dla klientów korzystających z czytników ekranu. [Dowiedz się więcej](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)",
     "width_is_automatically_optimized": "Szerokość jest automatycznie optymalizowana pod kątem urządzeń mobilnych.",
@@ -1047,6 +1055,9 @@
     "featured_collection_h3": "<h3>Polecana kolekcja</h3>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "Dodaj zestaw do koszyka",
+    "bundle_subtitle": "Wybierz swoje ulubione produkty i oszczędzaj",
+    "bundle_title": "Stwórz swój zestaw",
     "collapsible_row": "Wiersz zwijany",
     "button_label": "Kup teraz",
     "heading": "Nagłówek",
@@ -1085,6 +1096,9 @@
     "disclosures": "Informacje prawne"
   },
   "info": {
+    "bundle_card_palette": "Tekst karty i przenikanie obrazu zachowują stałą jasną paletę projektu; ciemne schematy kolorów wpływają tylko na tło sekcji i podsumowanie",
+    "bundle_max_metafield": "Nadpisywane przez metapole sklepu custom.bundle_max_items, gdy jest ustawione",
+    "bundle_discount_preview": "Tylko podgląd witryny sklepu. Utwórz odpowiedni rabat automatyczny w panelu administracyjnym Shopify, aby ten sam rabat został zastosowany przy realizacji zakupu",
     "video_alt_text": "Opisz wideo dla użytkowników technologii wspomagających",
     "video_autoplay": "Domyślnie filmy będą wyciszone",
     "video_external": "Użyj adresu URL z YouTube lub Vimeo",

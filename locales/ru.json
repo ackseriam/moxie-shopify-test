@@ -134,6 +134,12 @@
     "back_to_main_menu": "Назад в главное меню"
   },
   "content": {
+    "bundle_selected_count": "Выбрано {{ count }} из {{ max }}",
+    "bundle_max_reached": "Вы достигли лимита в {{ max }} товаров для этого набора",
+    "bundle_savings": "Вы экономите {{ amount }} (скидка {{ percent }}%)",
+    "bundle_select_product": "Добавить {{ title }} в набор",
+    "bundle_add_error_partial": "Не удалось добавить: {{ titles }}",
+    "bundle_onboarding": "Добавьте блоки товаров в редакторе темы, чтобы собрать набор",
     "reviews": "отз.",
     "no_results_found": "Результатов не найдено",
     "language": "Язык",

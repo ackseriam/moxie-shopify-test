@@ -130,6 +130,12 @@
     "zoom_media": "Zooma media {{ index }}"
   },
   "content": {
+    "bundle_selected_count": "{{ count }} av {{ max }} valda",
+    "bundle_max_reached": "Du har nått gränsen på {{ max }} produkter för det här paketet",
+    "bundle_savings": "Du sparar {{ amount }} ({{ percent }} % rabatt)",
+    "bundle_select_product": "Lägg till {{ title }} i paketet",
+    "bundle_add_error_partial": "Kunde inte läggas till: {{ titles }}",
+    "bundle_onboarding": "Lägg till produktblock i temaredigeraren för att sätta ihop paketet",
     "reviews": "recensioner",
     "language": "Språk",
     "localization_region_and_language": "Region och språk",

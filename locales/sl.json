@@ -134,6 +134,12 @@
     "back_to_main_menu": "Nazaj na glavni meni"
   },
   "content": {
+    "bundle_selected_count": "Izbrano: {{ count }} od {{ max }}",
+    "bundle_max_reached": "Dosegli ste omejitev {{ max }} izdelkov za ta paket",
+    "bundle_savings": "Prihranite {{ amount }} ({{ percent }} % popusta)",
+    "bundle_select_product": "Dodaj {{ title }} v paket",
+    "bundle_add_error_partial": "Ni bilo mogoče dodati: {{ titles }}",
+    "bundle_onboarding": "V urejevalniku teme dodajte bloke izdelkov, da sestavite paket",
     "reviews": "ocen.",
     "no_results_found": "Nobenega rezultata ni bilo mogoče najti",
     "language": "Jezik",

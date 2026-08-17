@@ -130,6 +130,12 @@
     "back_to_main_menu": "Назад към главното меню"
   },
   "content": {
+    "bundle_selected_count": "Избрани {{ count }} от {{ max }}",
+    "bundle_max_reached": "Достигнахте лимита от {{ max }} продукта за този комплект",
+    "bundle_savings": "Спестявате {{ amount }} ({{ percent }}% отстъпка)",
+    "bundle_select_product": "Добавяне на {{ title }} към комплекта",
+    "bundle_add_error_partial": "Неуспешно добавяне: {{ titles }}",
+    "bundle_onboarding": "Добавете блокове с продукти в редактора на темата, за да създадете комплекта",
     "reviews": "мнения",
     "language": "Език",
     "localization_region_and_language": "Регион и език",

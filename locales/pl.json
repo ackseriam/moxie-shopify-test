@@ -134,6 +134,12 @@
     "back_to_main_menu": "Wróć do menu głównego"
   },
   "content": {
+    "bundle_selected_count": "Wybrano {{ count }} z {{ max }}",
+    "bundle_max_reached": "Osiągnięto limit {{ max }} produktów dla tego zestawu",
+    "bundle_savings": "Oszczędzasz {{ amount }} ({{ percent }}% zniżki)",
+    "bundle_select_product": "Dodaj {{ title }} do zestawu",
+    "bundle_add_error_partial": "Nie udało się dodać: {{ titles }}",
+    "bundle_onboarding": "Dodaj bloki produktów w edytorze motywu, aby utworzyć zestaw",
     "reviews": "recenzje",
     "language": "Język",
     "localization_region_and_language": "Region i język",

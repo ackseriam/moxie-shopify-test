@@ -130,6 +130,12 @@
     "back_to_main_menu": "กลับไปที่เมนูหลัก"
   },
   "content": {
+    "bundle_selected_count": "เลือกแล้ว {{ count }} จาก {{ max }} รายการ",
+    "bundle_max_reached": "คุณเลือกสินค้าครบตามจำนวนสูงสุด {{ max }} ชิ้นสำหรับชุดนี้แล้ว",
+    "bundle_savings": "คุณประหยัด {{ amount }} (ลด {{ percent }}%)",
+    "bundle_select_product": "เพิ่ม {{ title }} ลงในชุด",
+    "bundle_add_error_partial": "ไม่สามารถเพิ่ม: {{ titles }}",
+    "bundle_onboarding": "เพิ่มบล็อกสินค้าในตัวแก้ไขธีมเพื่อสร้างชุดสินค้า",
     "reviews": "รีวิว",
     "language": "ภาษา",
     "localization_region_and_language": "ภูมิภาคและภาษา",

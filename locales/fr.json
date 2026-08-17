@@ -132,6 +132,12 @@
     "zoom_media": "Zoom du support multimédia {{ index }}"
   },
   "content": {
+    "bundle_selected_count": "{{ count }} sur {{ max }} sélectionnés",
+    "bundle_max_reached": "Vous avez atteint la limite de {{ max }} produits pour ce pack",
+    "bundle_savings": "Vous économisez {{ amount }} ({{ percent }} % de réduction)",
+    "bundle_select_product": "Ajouter {{ title }} au pack",
+    "bundle_add_error_partial": "Impossible d’ajouter : {{ titles }}",
+    "bundle_onboarding": "Ajoutez des blocs de produits dans l’éditeur de thème pour composer le pack",
     "reviews": "avis",
     "language": "Langue",
     "localization_region_and_language": "Région et langue",

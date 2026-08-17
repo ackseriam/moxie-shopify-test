@@ -130,6 +130,12 @@
     "zoom_media": "Perbesar media {{ index }}"
   },
   "content": {
+    "bundle_selected_count": "{{ count }} dari {{ max }} dipilih",
+    "bundle_max_reached": "Anda telah mencapai batas {{ max }} produk untuk paket ini",
+    "bundle_savings": "Anda hemat {{ amount }} (diskon {{ percent }}%)",
+    "bundle_select_product": "Tambahkan {{ title }} ke paket",
+    "bundle_add_error_partial": "Tidak dapat menambahkan: {{ titles }}",
+    "bundle_onboarding": "Tambahkan blok produk di editor tema untuk menyusun paket",
     "reviews": "ulasan",
     "language": "Bahasa",
     "localization_region_and_language": "Wilayah dan bahasa",

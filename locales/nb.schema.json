@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "Pakkekarusell",
     "404": "404",
     "colors": "Fargepalett",
     "custom_section": "Egendefinert seksjon",
@@ -171,6 +172,12 @@
     "disclosures": "Opplysninger"
   },
   "settings": {
+    "button_label": "Knappetikett",
+    "card_background": "Kortbakgrunn",
+    "discount_min_items": "Minste antall produkter for rabatt",
+    "discount_percentage": "Pakkerabatt",
+    "max_bundle_items": "Maksimalt antall produkter per pakke",
+    "subtitle": "Undertittel",
     "alignment": "Justering",
     "autoplay": "Autospill",
     "background": "Bakgrunn",
@@ -862,6 +869,7 @@
     "input_field": "Inndatafelt"
   },
   "content": {
+    "bundle": "Pakke",
     "advanced": "Avansert",
     "background_image": "Bakgrunnsbilde",
     "background_video": "Bakgrunnsvideo",
@@ -1047,6 +1055,9 @@
     "featured_collection_h3": "<h3>Utvalgt samling</h3>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "Legg pakken i handlekurven",
+    "bundle_subtitle": "Velg favorittene dine og spar",
+    "bundle_title": "Sett sammen pakken din",
     "button_label": "Handle nå",
     "collapsible_row": "Sammenleggbar rad",
     "heading": "Overskrift",
@@ -1085,6 +1096,9 @@
     "disclosures": "Opplysninger"
   },
   "info": {
+    "bundle_card_palette": "Kortteksten og bildeblandingen beholder designets faste lyse palett; mørke fargeskjemaer påvirker bare seksjonens bakgrunn og sammendraget",
+    "bundle_max_metafield": "Overstyres av butikkens metafelt custom.bundle_max_items når det er angitt",
+    "bundle_discount_preview": "Kun forhåndsvisning i nettbutikken. Opprett en tilsvarende automatisk rabatt i Shopify-administratoren slik at den samme rabatten brukes i kassen",
     "carousel_layout_on_mobile": "Karusell brukes alltid på mobil",
     "video_alt_text": "Beskriv videoen for brukere av hjelpeteknologi",
     "video_autoplay": "Videoer dempes som standard",

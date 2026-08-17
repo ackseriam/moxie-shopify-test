@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "번들 캐러셀",
     "404": "404",
     "custom_section": "사용자 지정 섹션",
     "icon": "아이콘",
@@ -171,6 +172,12 @@
     "disclosures": "고지 사항"
   },
   "settings": {
+    "button_label": "버튼 레이블",
+    "card_background": "카드 배경",
+    "discount_min_items": "할인을 위한 최소 제품 수",
+    "discount_percentage": "번들 할인",
+    "max_bundle_items": "번들당 최대 제품 수",
+    "subtitle": "부제목",
     "autoplay": "자동 재생",
     "background": "배경",
     "border_radius": "모서리 반경",
@@ -862,6 +869,7 @@
     "input_field": "입력 필드"
   },
   "content": {
+    "bundle": "번들",
     "background_video": "배경 비디오",
     "describe_the_video_for": "스크린리더를 사용하는 고객에게 슬라이드 쇼를 설명합니다. [자세히 알아보기](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)",
     "width_is_automatically_optimized": "너비는 모바일에 맞게 자동으로 최적화됩니다.",
@@ -1047,6 +1055,9 @@
     "featured_collection_h3": "<h3>추천 컬렉션</h3>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "번들을 카트에 추가",
+    "bundle_subtitle": "좋아하는 제품을 골라 절약하세요",
+    "bundle_title": "나만의 번들 만들기",
     "collapsible_row": "축소 가능 행",
     "button_label": "지금 쇼핑하기",
     "heading": "제목",
@@ -1085,6 +1096,9 @@
     "disclosures": "고지 사항"
   },
   "info": {
+    "bundle_card_palette": "카드 텍스트와 이미지 블렌드는 디자인의 고정된 라이트 팔레트를 유지합니다. 다크 색상 구성표는 섹션 배경과 요약에만 영향을 줍니다",
+    "bundle_max_metafield": "쇼핑몰 메타필드 custom.bundle_max_items가 설정된 경우 해당 값으로 재정의됩니다",
+    "bundle_discount_preview": "스토어프론트 미리보기 전용입니다. 결제 시 동일한 할인이 적용되도록 Shopify 관리자에서 일치하는 자동 할인을 생성하세요",
     "carousel_layout_on_mobile": "모바일에서는 항상 캐러셀이 사용됩니다.",
     "video_alt_text": "보조 기술 사용자를 위해 비디오를 설명하세요",
     "video_autoplay": "비디오는 기본적으로 음소거됩니다",

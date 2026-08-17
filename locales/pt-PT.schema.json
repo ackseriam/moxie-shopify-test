@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "Carrossel de pack",
     "404": "404",
     "colors": "Paleta de cores",
     "custom_section": "Secção personalizada",
@@ -171,6 +172,12 @@
     "disclosures": "Divulgações"
   },
   "settings": {
+    "button_label": "Etiqueta do botão",
+    "card_background": "Fundo do cartão",
+    "discount_min_items": "Mínimo de produtos para o desconto",
+    "discount_percentage": "Desconto do pack",
+    "max_bundle_items": "Máximo de produtos por pack",
+    "subtitle": "Subtítulo",
     "alignment": "Alinhamento",
     "autoplay": "Reprodução automática",
     "background": "Fundo",
@@ -862,6 +869,7 @@
     "input_field": "Campo de introdução"
   },
   "content": {
+    "bundle": "Pack",
     "advanced": "Avançado",
     "background_image": "Imagem de fundo",
     "background_video": "Vídeo de fundo",
@@ -1047,6 +1055,9 @@
     "shop_collection": "<p>Descubra a nossa coleção selecionada, com favoritos escolhidos a dedo que aliam estilo e qualidade.</p>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "Adicionar pack ao carrinho",
+    "bundle_subtitle": "Escolha os seus favoritos e poupe",
+    "bundle_title": "Crie o seu pack",
     "button_label": "Comprar agora",
     "collapsible_row": "Linha recolhível",
     "heading": "Título",
@@ -1085,6 +1096,9 @@
     "disclosures": "Divulgações"
   },
   "info": {
+    "bundle_card_palette": "O texto do cartão e a mistura da imagem mantêm a paleta clara fixa do design; os esquemas de cores escuros afetam apenas o fundo da secção e o resumo",
+    "bundle_max_metafield": "Substituído pelo metacampo da loja custom.bundle_max_items quando estiver definido",
+    "bundle_discount_preview": "Apenas pré-visualização da loja. Crie um desconto automático correspondente no admin da Shopify para que o mesmo desconto seja aplicado na finalização da compra",
     "video_alt_text": "Descreva o vídeo para utilizadores de tecnologia de apoio",
     "video_autoplay": "Os vídeos serão silenciados por predefinição",
     "video_external": "Utilize um URL do YouTube ou do Vimeo",

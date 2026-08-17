@@ -150,6 +150,12 @@
     }
   },
   "content": {
+    "bundle_selected_count": "{{ max }} میں سے {{ count }} منتخب کیے گئے",
+    "bundle_max_reached": "آپ اس بنڈل کے لیے {{ max }} پروڈکٹس کی حد تک پہنچ گئے ہیں",
+    "bundle_savings": "آپ {{ amount }} کی بچت کرتے ہیں ({{ percent }}% رعایت)",
+    "bundle_select_product": "{{ title }} کو بنڈل میں شامل کریں",
+    "bundle_add_error_partial": "شامل نہیں کیا جا سکا: {{ titles }}",
+    "bundle_onboarding": "بنڈل بنانے کے لیے تھیم ایڈیٹر میں پروڈکٹ بلاکس شامل کریں",
     "cancel": "منسوخ کریں",
     "discount": "ڈسکاؤنٹ",
     "account_title": "اکاؤنٹ",

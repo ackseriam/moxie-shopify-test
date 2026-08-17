@@ -33,6 +33,7 @@
     "text": "Text"
   },
   "content": {
+    "bundle": "Bundle",
     "visible_if_collection_has_more_products": "Visible if collection has more products than shown",
     "advanced": "Advanced",
     "appearance": "Appearance",
@@ -223,6 +224,9 @@
     "work_quickly_to_ship": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>"
   },
   "info": {
+    "bundle_max_metafield": "Overridden by the shop metafield custom.bundle_max_items when it's set",
+    "bundle_card_palette": "Card text and image blend keep the design's fixed light palette; dark schemes only affect the section background and summary",
+    "bundle_discount_preview": "Storefront preview only. Create a matching automatic discount in the Shopify admin so the same discount is applied at checkout",
     "actions_display_style": "Icons are always used on mobile",
     "applies_on_image_only": "Applies to images only",
     "aspect_ratio_adjusted": "Adjusted in some layouts",
@@ -252,6 +256,7 @@
     "media_type_info": "Features are populated from your menu links"
   },
   "names": {
+    "bundle_carousel": "Bundle carousel",
     "column": "Column",
     "product_title": "Product title",
     "custom_liquid": "Custom Liquid",
@@ -736,6 +741,12 @@
   "settings": {
     "accordion": "Accordion",
     "account": "Account",
+    "button_label": "Button label",
+    "card_background": "Card background",
+    "discount_min_items": "Minimum products for discount",
+    "discount_percentage": "Bundle discount",
+    "max_bundle_items": "Maximum products per bundle",
+    "subtitle": "Subtitle",
     "actions_display_style": "Menu style",
     "alignment": "Alignment",
     "alignment_mobile": "Mobile alignment",
@@ -1188,6 +1199,9 @@
   },
   "text_defaults": {
     "accordion_heading": "Accordion heading",
+    "add_bundle_to_cart": "Add bundle to cart",
+    "bundle_subtitle": "Pick your favorites and save",
+    "bundle_title": "Build your bundle",
     "are_purchases_final_sale": "Are any purchases final sale?",
     "be_bold": "Be bold.",
     "bestsellers": "Bestsellers",

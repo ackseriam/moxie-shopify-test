@@ -130,6 +130,12 @@
     "back_to_main_menu": "Quay lại menu chính"
   },
   "content": {
+    "bundle_selected_count": "Đã chọn {{ count }}/{{ max }}",
+    "bundle_max_reached": "Bạn đã đạt giới hạn {{ max }} sản phẩm cho combo này",
+    "bundle_savings": "Bạn tiết kiệm {{ amount }} (giảm {{ percent }}%)",
+    "bundle_select_product": "Thêm {{ title }} vào combo",
+    "bundle_add_error_partial": "Không thể thêm: {{ titles }}",
+    "bundle_onboarding": "Thêm khối sản phẩm trong trình chỉnh sửa chủ đề để tạo combo",
     "reviews": "đánh giá",
     "language": "Ngôn ngữ",
     "localization_region_and_language": "Khu vực và ngôn ngữ",

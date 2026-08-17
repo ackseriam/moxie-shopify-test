@@ -130,6 +130,12 @@
     "back_to_main_menu": "返回主菜单"
   },
   "content": {
+    "bundle_selected_count": "已选择 {{ count }}/{{ max }} 件",
+    "bundle_max_reached": "您已达到此套装 {{ max }} 件商品的上限",
+    "bundle_savings": "您节省 {{ amount }}（优惠 {{ percent }}%）",
+    "bundle_select_product": "将 {{ title }} 添加到套装",
+    "bundle_add_error_partial": "无法添加：{{ titles }}",
+    "bundle_onboarding": "在主题编辑器中添加产品块以创建套装",
     "reviews": "评价",
     "no_results_found": "未找到结果",
     "language": "语言",

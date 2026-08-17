@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "Pakkekarrusel",
     "404": "404",
     "colors": "Farvepalet",
     "custom_section": "Brugerdefineret sektion",
@@ -171,6 +172,12 @@
     "disclosures": "Oplysninger"
   },
   "settings": {
+    "button_label": "Label til knap",
+    "card_background": "Kortbaggrund",
+    "discount_min_items": "Minimum antal produkter for rabat",
+    "discount_percentage": "Pakkerabat",
+    "max_bundle_items": "Maksimalt antal produkter pr. pakke",
+    "subtitle": "Undertitel",
     "alignment": "Justering",
     "autoplay": "Automatisk afspilning",
     "background": "Baggrund",
@@ -862,6 +869,7 @@
     "input_field": "Indtastningsfelt"
   },
   "content": {
+    "bundle": "Pakke",
     "advanced": "Avanceret",
     "background_image": "Baggrundsbillede",
     "background_video": "Baggrundsvideo",
@@ -1047,6 +1055,9 @@
     "shop_collection": "<p>Opdag vores nøje udvalgte kollektion med håndplukkede favoritter, der forener stil og kvalitet.</p>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "Læg pakken i indkøbskurven",
+    "bundle_subtitle": "Vælg dine favoritter, og spar",
+    "bundle_title": "Sammensæt din pakke",
     "button_label": "Køb nu",
     "collapsible_row": "Række, der kan skjules",
     "heading": "Overskrift",
@@ -1085,6 +1096,9 @@
     "disclosures": "Oplysninger"
   },
   "info": {
+    "bundle_card_palette": "Kortets tekst og billedblanding bevarer designets faste lyse palet; mørke farveskemaer påvirker kun sektionens baggrund og oversigten",
+    "bundle_max_metafield": "Tilsidesættes af butikkens metafelt custom.bundle_max_items, når det er angivet",
+    "bundle_discount_preview": "Kun forhåndsvisning i butikken. Opret en tilsvarende automatisk rabat i Shopify-administratoren, så den samme rabat anvendes ved betaling",
     "carousel_layout_on_mobile": "Karrusellen bruges altid på mobil",
     "video_alt_text": "Beskriv videoen for brugere af hjælpeteknologi",
     "video_autoplay": "Videoer vil som standard være uden lyd",

@@ -9,6 +9,7 @@
  */
 {
   "names": {
+    "bundle_carousel": "Karusel sady",
     "404": "404",
     "colors": "Paleta barev",
     "custom_section": "Vlastní sekce",
@@ -171,6 +172,12 @@
     "disclosures": "Prohlášení"
   },
   "settings": {
+    "button_label": "Štítek tlačítka",
+    "card_background": "Pozadí karty",
+    "discount_min_items": "Minimální počet produktů pro slevu",
+    "discount_percentage": "Sleva na sadu",
+    "max_bundle_items": "Maximální počet produktů v sadě",
+    "subtitle": "Podtitulek",
     "alignment": "Zarovnání",
     "autoplay": "Automatické přehrávání",
     "background": "Pozadí",
@@ -862,6 +869,7 @@
     "input_field": "Vstupní pole"
   },
   "content": {
+    "bundle": "Sada",
     "advanced": "Pokročilé",
     "background_image": "Obrázek na pozadí",
     "background_video": "Video na pozadí",
@@ -1047,6 +1055,9 @@
     "featured_collection_h3": "<h3>Doporučená kolekce</h3>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "Přidat sadu do košíku",
+    "bundle_subtitle": "Vyberte si své oblíbené produkty a ušetřete",
+    "bundle_title": "Sestavte si sadu",
     "button_label": "Nakupujte nyní",
     "collapsible_row": "Rozbalovací řádek",
     "heading": "Nadpis",
@@ -1085,6 +1096,9 @@
     "disclosures": "Prohlášení"
   },
   "info": {
+    "bundle_card_palette": "Text karty a prolnutí obrázku zachovávají pevnou světlou paletu designu; tmavá barevná schémata ovlivňují pouze pozadí sekce a souhrn",
+    "bundle_max_metafield": "Přepsáno metapolem obchodu custom.bundle_max_items, pokud je nastaveno",
+    "bundle_discount_preview": "Pouze náhled výlohy. Vytvořte odpovídající automatickou slevu v administraci Shopify, aby se stejná sleva uplatnila při pokladně",
     "video_alt_text": "Popište video pro uživatele asistivních technologií",
     "video_autoplay": "Videa budou ve výchozím nastavení ztlumená",
     "video_external": "Použijte URL z YouTube nebo Vimeo",

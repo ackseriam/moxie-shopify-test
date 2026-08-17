@@ -10,6 +10,7 @@
 {
   "names": {
     "404": "404",
+    "bundle_carousel": "Carrusel de bundle",
     "colors": "Paleta de colores",
     "custom_section": "Sección personalizada",
     "icon": "Ícono",
@@ -173,6 +174,12 @@
   "settings": {
     "alignment": "Alineación",
     "autoplay": "Reproducción automática",
+    "button_label": "Etiqueta del botón",
+    "card_background": "Fondo de la tarjeta",
+    "discount_min_items": "Mínimo de productos para el descuento",
+    "discount_percentage": "Descuento del bundle",
+    "max_bundle_items": "Máximo de productos por bundle",
+    "subtitle": "Subtítulo",
     "background": "Fondo",
     "border_radius": "Radio de las esquinas",
     "border_width": "Grosor del borde",
@@ -863,6 +870,7 @@
   },
   "content": {
     "advanced": "Avanzado",
+    "bundle": "Bundle",
     "background_image": "Imagen de fondo",
     "background_video": "Video de fondo",
     "block_size": "Tamaño del bloque",
@@ -1047,6 +1055,9 @@
     "shop_collection": "<p>Descubre nuestra colección seleccionada con favoritos seleccionados a mano que combinan estilo y calidad.</p>"
   },
   "text_defaults": {
+    "add_bundle_to_cart": "Añadir bundle al carrito",
+    "bundle_subtitle": "Elige tus favoritos y ahorra",
+    "bundle_title": "Arma tu bundle",
     "button_label": "Comprar ahora",
     "collapsible_row": "Fila plegable",
     "heading": "Título",
@@ -1085,6 +1096,9 @@
     "disclosures": "Divulgaciones"
   },
   "info": {
+    "bundle_max_metafield": "Se sobrescribe con el metafield de tienda custom.bundle_max_items cuando está definido",
+    "bundle_card_palette": "El texto y el fondo de las tarjetas mantienen la paleta clara fija del diseño; los esquemas oscuros solo afectan al fondo de la sección y al resumen",
+    "bundle_discount_preview": "Solo es una previsualización. Crea un descuento automático equivalente en el admin de Shopify para que se aplique en el checkout",
     "carousel_layout_on_mobile": "En dispositivos móviles siempre se usa el carrusel",
     "video_alt_text": "Describe el video para personas usuarias de tecnologías de asistencia",
     "video_autoplay": "Los videos estarán silenciados de forma predeterminada",
